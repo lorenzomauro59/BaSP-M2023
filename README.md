@@ -4,4 +4,4 @@
 Working on Figma, frame: landing-page.
 
 ## Week 02
-First html and working wit git and github.
+First html and working with git and github.
