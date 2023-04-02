@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Week-03/css/reset.css">
     <link rel="stylesheet" href="../Week-03/css/styles.css">
     <title>
       Mega Rocket
     </title>
   </head>
-  <body>
-    <header>
+  <body class="body"> 
+    <header class="header">
       <h1>
         Mega Rocket
       </h1>
-      <nav>
+      <div class="hamburguer-icon">
+        <a href="">
+          <img src="../Week-03/assets/imgs/menu-h.png" alt="menu icon">
+        </a>
+      </div>
+      <nav class="social-media">
         <ul>
           <li>
             <a href="#" target=_blank>
-              <img src="../Week-03/assets/imgs/linkedin.svg" alt="linkedin icon">
+              <img src="../Week-03/assets/imgs/lnkd.svg" alt="linkedin icon">
             </a>
           </li>
           <li>
@@ -44,6 +50,7 @@
         </ul>
       </nav>
     </header>
+    <div class="side-bar">
     <div>
       <input type="search" name="search" placeholder="Search">
       <nav>
@@ -103,90 +110,112 @@
         </li>
       </ul>
     </section>
-    <main>
-      <h2>
-        Welcome to mega rocket
-      </h2>
-      <h3>
-        Winner of Lorem ipsum of the year
-      </h3>
-      <p>
-        No solo ganamos el premio, sino que somo el premio: 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat ante odio, id semper erat varius.
-        Fusce ultricies tempor vehicula. In lobortis varius arcu et dignissim. Donec egestas ligula lacus, nec eleifend 
-        odio tempor vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-      </p>
-      <button type="button">
-        Learn more
-      </button>
-      <img src="../Week-03/assets/imgs/main-image.png" alt="people training">
-    </main>
-    <section>
-      <h2>
-        App Features
-      </h2>
-      <article>
-        <h3>
-        Appointment booking
+    </div>
+    <section class="sect-welcome">
+      <div class="container-1"> 
+        <h2 class="title-welcome">
+           Welcome to
+          <span class="uppercase">
+            mega rocket
+          </span>
+        </h2>
+        <h3 class="title-winner">
+          Winner of Lorem ipsum of the year
         </h3>
-        <img src="../Week-03/assets/imgs/Appointment-booking.svg" alt="Appointment booking image">
+        <p class="p1">
+          No solo ganamos el premio, sino que somo el premio: 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat ante odio, id semper erat varius.
+          Fusce ultricies tempor vehicula. In lobortis varius arcu et dignissim. Donec egestas ligula lacus, nec eleifend 
+          odio tempor vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+        </p>
+        <a href="">
+          <img src="../Week-03/assets/imgs/learn-more.png" alt="learn more">
+        </a>
+      </div>
+      <div class="img-people">
+      <img src="../Week-03/assets/imgs/main-image.png" alt="people training">
+      </div>
+    </section>
+    <section class="sect-activities">
+      <div class="title-features">
+        <h2>
+          App Features
+        </h2>
+      </div>
+      <article class="articles-features">
+        <img class="img-features" src="../Week-03/assets/imgs/Appointment-booking.svg" alt="Appointment booking image">
+        <div class="articles-features">
+        <h3>
+          Appointment booking
+        </h3>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eos placeat ratione, 
           sed numquam ipsa modi sunt repudiandae reiciendis dolore hic ut corrupti ad earum minus libero voluptas qui.
         </p>
+        </div>
       </article>
-      <article>
-        <h3>
-        Membership management
-        </h3>
+      <article class="articles-features">
         <img src="../Week-03/assets/imgs/Membership-management.svg" alt="Membership management">
+        <h3>
+          Membership management
+        </h3>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eos placeat ratione,
           sed numquam ipsa modi sunt repudiandae reiciendis dolore hic ut corrupti ad earum minus libero voluptas qui.
         </p>
       </article>
-      <article>
+      <article class="articles-features">
+        <img src="../Week-03/assets/imgs/Schedule-and-timetables.svg" alt="Schedule and timetables">
         <h3>
           Schedule and timetables
         </h3>
-        <img src="../Week-03/assets/imgs/Schedule-and-timetables.svg" alt="Schedule and timetables">
         <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eos placeat ratione,
-        sed numquam ipsa modi sunt repudiandae reiciendis dolore hic ut corrupti ad earum minus libero voluptas qui.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eos placeat ratione,
+          sed numquam ipsa modi sunt repudiandae reiciendis dolore hic ut corrupti ad earum minus libero voluptas qui.
         </p>
       </article>
-      <article>
+      <article class="articles-features">
+        <img src="../Week-03/assets/imgs/Contact-and-suggestions.svg" alt="Contact and suggestions">
         <h3>
           Contact and suggestions
         </h3>
-        <img src="../Week-03/assets/imgs/Contact-and-suggestions.svg" alt="Contact and suggestions">
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod eos placeat ratione,
           sed numquam ipsa modi sunt repudiandae reiciendis dolore hic ut corrupti ad earum minus libero voluptas qui.
         </p>
       </article>
     </section>
-    <section>
-      <h3>
-        Contact
-      </h3>
-      <form>
-        <label>
-          Name
-        </label>
-        <input type="text" name="fname">
-        <label>
-          Last name
-        </label>
-        <input type="text" name="lname">
-        <label>
-          Email
-        </label>
-        <input type="email" name="email">
-        <label>
+    <section class="sect-form">
+      <div class="title-features">
+        <h2>
+          Contact
+        </h2>
+      </div>
+        <form>
+          <div class="label-1">
+            <div class="form-1">
+              <label for="fname" class="label-2">
+                Name
+              </label>
+              <input type="text" name="fname">
+            </div>
+          <div class="form-1">
+            <label for="lname" class="label-2">
+              Last name
+            </label>
+            <input type="text" name="lname">
+          </div>
+          <div class="form-1">
+            <label for="email" class="label-2">
+              Email
+            </label>
+            <input type="email" name="email">
+          </div>
+        </div>
+        <label for="contact-reason" class="label-2">
           Contact Reason
         </label>
-        <select id="option" name="option">
+        <select id="option" name="contact-reason">
           <option value="opcion1">
             I want to know about membership and cost
           </option>
@@ -197,41 +226,45 @@
             I want to make a contact
           </option>
         </select>
-        <label>
+        <label for="message" class="label-2">
           Message
         </label>
         <textarea name="message" placeholder="Write here">
         </textarea>
-        <button type="reset">
-          Clear
-        </button>
-        <button type="submit">
-          Send it
-        </button>
+        <span class="button-1">
+          <a href="">
+            <img src="../Week-03/assets/imgs/clear.png" alt="clear">
+          </a>
+        </span>
+          <a href="">
+          <img src="../Week-03/assets/imgs/send-it.png" alt="send it">
+          </a>
       </form>
     </section>
-    <article>
+    <article class="art-history">
       <h2>
         History
       </h2>
+      <span>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat ante odio,
         id semper erat varius ut. Fusce ultricies tempor vehicula. Donec egestas ligula lacus, nec eleifend odio.
         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus dignissim
         imperdietultricies 
       </p>
-      <h3>
+      </span>
+      <h2>
       Origin
-      </h3>
+      </h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit porro autem, accusamus doloribus
         molestias expedita quisquam distinctio pariatur nesciunt et eos quia officiis repellendus consequuntur 
         atione fuga dolor. Facilis tenetur sequi animi repellendus ea impedit officia culpa delectus nam. Iure.
       </p>
       <img src="../Week-03/assets/imgs/origen.png" alt="gyms origin ">
-      <h3>
+      <h2>
         Mission
-      </h3>
+      </h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit porro autem, accusamus doloribus
         molestias expedita quisquam distinctio pariatur nesciunt et eos quia officiis repellendus consequuntur 
@@ -240,7 +273,7 @@
       <img src="../Week-03/assets/imgs/mision.png" alt="gyms origin ">
     </article>
       <article>
-        <h2>
+        <h3>
           Activities
         </h2>
         <ol>
@@ -263,9 +296,9 @@
         <img src="../Week-03/assets/imgs/Activities.svg" alt="Activities">
       </article>
       <article>
-        <h2>
+        <h3>
           Black Membership
-        </h2>
+        </h3>
         <ol>
           <li>
             Free pass to the weight room
@@ -283,9 +316,9 @@
         <img src="../Week-03/assets/imgs/black-membership.svg" alt= "Black membership">
       </article>
       <article>
-        <h2>
+        <h3>
           Classic Membership
-        </h2>
+        </h3>
         <ol>
           <li>
             Free pass to the weight room
@@ -300,9 +333,9 @@
         <img src="../Week-03/assets/imgs/Classic-Membership.svg" alt="Classic Membershipp">
       </article>
       <article>
-        <h2>
+        <h3>
           Only Classes Membership
-        </h2>
+        </h3>
         <ol>
           <li>
             Free pass to the weight room
@@ -313,7 +346,6 @@
         </ol>
         <img src="../Week-03/assets/imgs/Only-Classes-Membership.svg" alt="Only classes membership">
       </article>
-    <footer>
       <nav class="#">
         <a href="#"><img src="../Week-03/assets/imgs/Prev.png" alt="prev"></a>
         <a href="#"><img src="../Week-03/assets/imgs/1.png" alt="1"></a>
@@ -324,11 +356,12 @@
         <a href="#"><img src="../Week-03/assets/imgs/susp.png" alt="more pages"></a>
         <a href="#"><img src="../Week-03/assets/imgs/Next.png" alt="next"></a>
       </nav>
+    <footer>
       <nav>
         <ul>
           <li>
             <a href="#" target=_blank>
-              <img src="../Week-03/assets/imgs/linkedin.svg" alt="linkedin icon">
+              <img src="../Week-03/assets/imgs/lnkd.svg" alt="linkedin icon">
             </a>
           </li>
           <li>
