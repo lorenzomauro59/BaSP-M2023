@@ -87,32 +87,101 @@ h2, h3, h4{
 }
 
 .sect-features {
-  margin-top: 100px;
+  display: inline-block;
+  margin-top: -400px;
   border-top: 1px solid rgb(221, 225, 227);
   padding-top: 60px;
 }
 
 .title-features{
+  display: inline-block;
   width: 180px;
   border-bottom: 4px solid rgba(170, 206, 155); 
+}
+
+.container-0{
+  display: inline-block;
+  padding-top: 60px;
+}
+
+.art-features{
+  display: inline-block;
+  width: 650px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.float-left-0{
+  position: relative;
+  top: 0px;
+  right: 0px;
+  float: left;
+}
+
+.float-right-0{
+  position: relative;
+  width: 450px;
+  top: -50px;
+  right: 0px;
+  float: right;
+}
+
+
+.float-left-01{
+  position: relative;
+  top: -15px;
+  right: 0px;
+  float: left;
+
+}
+
+.float-right-01{
+  position: relative;
+  width: 490px;
+  top: -69px;
+  right: 0px;
+  float: right;
+}
+
+.container-02{
+  display: inline-block;
+  padding-top: 60px;
+}
+
+.float-left-00{
+  position: relative;
+  top: 0px;
+  right: 0px;
+  float: left;
+}
+
+.float-right-00{
+  position: relative;
+  width: 459px;
+  top: -50px;
+  right: 0px;
+  float: right;
+}
+
+.float-left-02{
+  position: relative;
+  top: -20px;
+  right: 0px;
+  float: left;
+
+}
+
+.float-right-02{
+  position: relative;
+  width: 490px;
+  top: -71px;
+  right: 0px;
+  float: right;
 }
 
 .p2{
   font-size: 14px;
 }
-
-/* .articles-features{
-  display: inline-block;
-  width:;
-} */
-
-/* .img-features{
-  float: left;
-}
-
-.articles-features{
-  float:right;
-} */
 
 .sect-form{
   margin-top: 100px;
@@ -129,10 +198,6 @@ input[type=text],input[type=email]{
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-/* .label-1{
-  display: inline-block
-} */
 
 select {
   width: 700px;
@@ -237,6 +302,89 @@ textarea {
   margin-top: 100px;
   border-top: 1px solid rgb(221, 225, 227);
   padding-top: 60px;
+}
+
+.container-3{
+  display: inline-block;
+}
+
+.container-4{
+  display: inline-block;
+}
+
+.float-right1{
+  position: relative;
+  top: 10px;
+  right: -50px;
+  float: right;
+}
+
+.float-left1{
+  position: relative;
+  top: 73px;
+  right: 20px;
+  float: left;
+}
+
+.float-right2{
+  position: relative;
+  top: -5px;
+  right: -85px;
+  float: right;
+}
+
+.float-left2{
+  width: 142px;
+  height: 142px;
+  position: relative;
+  top: 48px;
+  right: -30px;
+  float: left;
+}
+
+.art-activities{
+  display: inline-block;
+  padding-left: 100px;
+  padding-right: 160px;
+}
+
+.float-right3{
+  position: relative;
+  top: -110px;
+  right: -250px;
+  float:right;
+}
+
+.float-left3{
+  width: 148px;
+  height: 148px;
+  position: relative;
+  top: 73px;
+  right: -50px;
+  float: left;
+}
+
+.float-right4{
+  position: relative;
+  top: -128px;
+  right: -318px;
+  float: right;
+}
+
+.float-left4{
+  width: 130px;
+  height: 130px;
+  position: relative;
+  top: 45px;
+  right: -120px;
+  float: left;
+}
+
+.art-activities-2{
+  display: inline-block;
+  width: 350px;
+  padding-left: 35px;
+  padding-right: 167px;
 }
 
 .pagination{
