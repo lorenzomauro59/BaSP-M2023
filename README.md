@@ -4,14 +4,13 @@
 Mega Rocket is a web application for a gym that provides a complete online training experience with personalized user accounts. Users can access a variety of live and on-demand classes and personalized training plans. In the next lines, we will detail the progress in the development of the app.
 
 ## Week 01
-Working on Figma, frame: landing-page.
+During week, we used Figma to design a landing page for desktop, tablet, and mobile devices. We learned how to use design tools, create a color palette, and choose appropriate fonts to create a visually appealing and consistent design.
 
 ## Week 02
-First html: landing page, and working with git and github.
+During week, we structured a webpage using HTML with an emphasis on semantic tags. We used appropriate tags to create an organized layout and a user-friendly design.
 
 ## Week 03
-Giving CSS style to the landing page.
-
+During week, we styled a landing page using CSS to achieve a pixel-perfect design without responsiveness. We explored various CSS techniques and created a separate CSS file for the project.
 
 
 ## Autor: Lorenzo Mauro
