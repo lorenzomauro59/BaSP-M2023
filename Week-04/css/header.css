@@ -1,19 +1,33 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  min-height: 70px;
-  /* background-color: #f2f2f2; */
+  align-items: center;
+  min-height: 6rem;
   border-bottom: .5rem rgba(170, 206, 155) solid;
+}
+
+header > nav > ul{
+  display: flex;
+}
+
+header > nav  > ul > li{
+  list-style-type: none;
+  padding: .2rem;
+  max-width: 100%;
+  height: auto;
+}
+
+header > nav  > ul > li > a >img {
+  width: 1.8em;
 }
 
 h1 {
   color: rgba(55, 56, 103, 0.4);
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-left: 2rem;
 }
 
-#container-1 {
+#container {
   display: flex;
   align-items: center;
 }
@@ -21,14 +35,3 @@ h1 {
 #hamburguer-icon {
   order: -1;
 }
-
-#social-media-header ul{
-  display: flex;
-}
-
-#social-media-header li{
-  list-style-type: none;
-  padding: .2rem;
-}
-
-

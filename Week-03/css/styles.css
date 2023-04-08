@@ -389,16 +389,7 @@ footer {
   cursor: pointer;
 } 
 
-.page-btn-0 {
-  display: inline;
-  padding: 10px;
-  background-color: white;
-  color: rgba(170, 206, 155);
-  border: solid rgba(170, 206, 155);
-  border-radius: 7px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
+
 
 .p6 {
   padding: 60px;
