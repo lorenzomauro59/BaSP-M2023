@@ -1,5 +1,6 @@
 body {
-  margin: 15px;
+  min-width: 390px;
+  margin: .5rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
@@ -14,7 +15,7 @@ h2, h3, h4 {
 /* body */
 
 h2 {
-  font-size: 3em;  
+  font-size: 3em;
 }
 
 h3 {
@@ -61,7 +62,16 @@ footer {
 footer > nav > ul{
   display: flex;
   justify-content: center;
+  align-items: center;
+  max-width: 35rem;
   padding-top: 1.5rem;
+  margin: 0 auto;
+}
+
+footer > nav > ul >li{
+  list-style-type: none;
+  padding: .1rem;
+  flex-grow: 1;
 }
 
 footer > p {
@@ -70,38 +80,32 @@ footer > p {
   padding-top: 1rem;
 }
 
-footer > nav > ul >li{
-  list-style-type: none;
-  padding: .2rem;
-}
-
 #title-winner {
   color: rgba(55, 56, 103, 0.4);
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 #sect-welcome {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   background-color: rgba(170, 206, 155, 0.1);
 }
 
-#sect-welcome p {
+#sect-welcome > div > p {
   color: rgba(55, 56, 103, 0.4);
   line-height: 2em;
   word-spacing: .5em;
+  padding-left: .5rem;
+  text-align: left;
 }
 
-#sect-welcome img {
+#sect-welcome > div > img {
+  flex-grow: 1;
+  flex-shrink: 0;
   max-width: 100%;
+  border-radius: 1rem;
 }
-
-/* #img-people {
-  max-width: 100%;
-  height: auto;
-  display: block;
-} */
 
 #button-learn-more {
   display: none;
@@ -143,18 +147,30 @@ footer > nav > ul >li{
   word-spacing: .5em;
 }
 
-#sect-welcome img {
-  max-width: 100%;
+#border-p {
+  border-left: 5px solid  rgba(55, 56, 103);
+  padding-left: 1em;
+}
+
+#art-history p {
+  color: rgba(55, 56, 103, 0.4);
+  font-size: 1em;
+  line-height: 1.5em;
+  word-spacing: .5em;
 }
 
 #sect-activities > .container-0{
+  justify-content: space-around;
   align-items: center;
 }
 
 #pagination {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
   padding-top: 3rem;
+  max-width: 45rem;
 }
 
 .uppercase {
@@ -220,7 +236,9 @@ footer > nav > ul >li{
 }
 
 .container-1 img {
-  max-width: 100%;
+  width: 100%;
+  height: 30%;
+  border-radius: .8em;
 }
 
 .p1 {
@@ -233,26 +251,38 @@ footer > nav > ul >li{
 }
 
 .art-activities{
+  max-width: 18rem;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: ;
   padding-bottom: 2rem;
-}
-
-.art-activities > div {
-  text-align: center;
-  list-style-position: inside;
-}
-
-.art-activities , p {
-  width: 100%;
   color: rgba(55, 56, 103);
   font-size: 1em;
 }
 
+.art-activities > div > h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.art-activities > div {
+  width: 18rem;
+  height: 15.125rem; 
+  text-align: center;
+  list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.art-activities > img {
+  width: 8.875rem;
+  height: 8.875rem;
+}
+
 .page-btn {
   padding: .5rem 1.2rem;
-  margin: 0 .5rem;
+  margin: 0 auto;
   color: rgba(170, 206, 155);
   background-color: white;
   border: solid rgba(170, 206, 155);
@@ -264,4 +294,74 @@ footer > nav > ul >li{
 .page-btn:nth-child(5),
 .page-btn:nth-child(6) {
   display: none;
+}
+
+/* media queries */ 
+
+@media only screen and (min-width: 601px) {
+  #sect-welcome > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  }
+
+  #sect-welcome > div >p {
+  order: -1;
+  }
+  
+  .container-0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: ; 
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  }
+
+  .art-features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+  .float-right{
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  float:right;
+}
+
+  .float-left{
+  position:relative;
+  float:left;
+}
+
+  .container-1 {
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+  .art-activities {
+  max-width: 30rem;
+  }
+
+  .container-1 > div > p {
+  border-left: 2px solid  rgba(55, 56, 103);
+  padding-left: 1rem;
+}
+
+}
+
+@media only screen and (min-width: 1025px) {
+  #hamburguer-icon {
+  display:none;
+}
+  
+
 }
