@@ -89,7 +89,7 @@ footer > p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(170, 206, 155, 0.1);
+  background-color: rgba(170, 206, 155, 0.2);
 }
 
 #sect-welcome > div > p {
@@ -324,19 +324,19 @@ footer > p {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 2rem;
-}
+  }
 
   .float-right{
   position: relative;
   padding-left: 2rem;
   margin-bottom: 2rem;
   float:right;
-}
+  }
 
   .float-left{
   position:relative;
   float:left;
-}
+  }
 
   .container-1 {
   display: flex;
@@ -345,7 +345,7 @@ footer > p {
   justify-content: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
+  }
 
   .art-activities {
   max-width: 30rem;
@@ -354,14 +354,145 @@ footer > p {
   .container-1 > div > p {
   border-left: 2px solid  rgba(55, 56, 103);
   padding-left: 1rem;
-}
+  }
 
 }
 
 @media only screen and (min-width: 1025px) {
   #hamburguer-icon {
   display:none;
-}
-  
+  }
 
-}
+  #side-bar {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+  background-color: rgba(170, 206, 155, 0.1);
+  }
+
+  #nav-1 {
+
+  }
+
+  #nav-1 input {
+  width: 80%;
+  padding: .5rem .5rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  border: .1rem solid rgba(55, 56, 103, 0.4);
+  border-radius: .4rem;
+  }
+
+  #nav-1 > nav {
+  padding-left: 1rem;
+  }
+
+  #nav-1 > nav > h3 {
+  padding-top: .5rem;
+  width: 40%;
+  height: 3rem;
+  border-bottom: .2rem solid rgba(170, 206, 155); 
+  }
+
+  #nav-1 > nav > ul {
+    padding: 0;
+  }
+
+  #nav-1 > nav > ul > li{
+  width: 80%;
+  list-style-type: none;
+  border-bottom: .1rem solid  rgba(55, 56, 103);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  }
+
+  #nav-1 > nav > ul > li > a{
+  color: rgba(55, 56, 103);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  text-decoration: none;
+  }
+
+  #nav-1 > nav > ul > li > a:hover{
+  color: rgba(55, 56, 103, .5);
+  font-size: 1.1rem;
+  }
+
+  #nav-2 {
+  padding-left: 1rem;
+  }
+
+  #nav-2 h3{
+  width: 16vw;
+  height: 3rem;
+  border-bottom: .2rem solid rgba(170, 206, 155); 
+  }
+
+  #nav-2 p{
+  width: 80%;
+  color: rgba(55, 56, 103);
+  font-size: 1em;
+  }
+
+  #nav-2 > ul{
+  padding-left: 0;
+  }
+
+  #nav-2 > ul > li{
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  width: 80%;
+  list-style-type: none;
+  border-bottom: .1rem solid  rgba(55, 56, 103);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: .8em;
+  }
+
+  #nav-2 > ul > li > img{
+  padding-right: 1rem;
+  max-width: 1rem;
+  }
+
+  #nav-2 > ul > li > a{
+  color: rgba(55, 56, 103);
+  text-decoration: none;
+  max-width: 80%;
+  }
+
+  #nav-2 > ul > li > a:hover {
+  color: rgba(55, 56, 103, .5);
+  font-size: .8rem;
+  }
+
+  #sect-main {
+  display: flex;
+  }
+
+  #sect-welcome {
+  background-color: ;
+  background-image: url(/Users/lorenzomauro/Desktop/BaSP-M2023/assets/imgs/mision.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  #button-learn-more {
+  display: inline;
+  padding: 15px 32px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 6px;
+  color: rgba(55, 56, 103);
+  background-color: rgba(170, 206, 155);
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  }
+
+  #sect-welcome > div >img {
+  display: none;
+  }
+
+  }
