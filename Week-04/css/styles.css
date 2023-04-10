@@ -26,7 +26,7 @@ h4 {
   font-size: 1.5em;
 }
 
-input[type=text],input[type=email]{
+input[type=text],input[type=email] {
   width: 100%;
   padding: 1rem 1rem;
   margin: 1rem 0;
@@ -68,7 +68,7 @@ footer > nav > ul{
   margin: 0 auto;
 }
 
-footer > nav > ul >li{
+footer > nav > ul >li {
   list-style-type: none;
   padding: .1rem;
   flex-grow: 1;
@@ -89,10 +89,10 @@ footer > p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(170, 206, 155, 0.2);
+  background-color: rgba(170, 206, 155, 0.1);
 }
 
-#sect-welcome > div > p {
+#sect-welcome > p {
   color: rgba(55, 56, 103, 0.4);
   line-height: 2em;
   word-spacing: .5em;
@@ -100,23 +100,24 @@ footer > p {
   text-align: left;
 }
 
-#sect-welcome > div > img {
+#sect-welcome > img {
+  width: 100%;
   flex-grow: 1;
   flex-shrink: 0;
   max-width: 100%;
-  border-radius: 1rem;
+  border-radius: .5rem;
 }
 
 #button-learn-more {
   display: none;
-  padding: 15px 32px;
-  margin-left: 30px;
+  padding: 1rem 2rem;
+  margin-left: 2rem;
   border: none;
-  border-radius: 6px;
+  border-radius: .6rem;
   color: rgba(55, 56, 103);
   background-color: rgba(170, 206, 155);
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -135,9 +136,11 @@ footer > p {
 }
 
 #buttons {
+  height: 10rem;
   display: flex;
-  justify-content: space-around;
-
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #art-history p {
@@ -159,8 +162,8 @@ footer > p {
   word-spacing: .5em;
 }
 
-#sect-activities > .container-0{
-  justify-content: space-around;
+#sect-activities {
+  padding-left: 2rem;
   align-items: center;
 }
 
@@ -207,7 +210,7 @@ footer > p {
   background-color: rgba(170, 206, 155);
   border: none;
   color: rgba(55, 56, 103);
-  width: 8rem;
+  width: 10rem;
   padding: 1rem 2rem;
   text-align: center;
   font-size: 1em;
@@ -219,7 +222,7 @@ footer > p {
   background-color: white;
   border-color: rgba(55, 56, 103);
   color: rgba(55, 56, 103);
-  width: 8rem;
+  width: 10rem;
   padding: 1rem 2rem;
   text-align: center;
   font-size: 1em;
@@ -231,13 +234,14 @@ footer > p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 .container-1 img {
+  margin-top: 2rem;
   width: 100%;
-  height: 30%;
   border-radius: .8em;
 }
 
@@ -250,26 +254,24 @@ footer > p {
   word-spacing: .5em;
 }
 
-.art-activities{
-  max-width: 18rem;
+.art-activities {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex-wrap: ;
   padding-bottom: 2rem;
   color: rgba(55, 56, 103);
   font-size: 1em;
 }
 
+.art-activities > div > ol{
+  list-style-position: inside;
+  padding-left: 0;
+}
+
 .art-activities > div > h2 {
-  font-size: 1.8rem;
   margin-top: 2rem;
 }
 
 .art-activities > div {
-  width: 18rem;
-  height: 15.125rem; 
-  text-align: center;
   list-style-position: inside;
   margin-left: 0;
   padding-left: 0;
@@ -299,15 +301,15 @@ footer > p {
 /* media queries */ 
 
 @media only screen and (min-width: 601px) {
-  #sect-welcome > div {
+  #sect-welcome{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   }
 
-  #sect-welcome > div >p {
-  order: -1;
+  #sect-welcome > img {
+  order: 1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   }
   
   .container-0 {
@@ -320,10 +322,22 @@ footer > p {
   }
 
   .art-features {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 2rem;
+  }
+
+  #buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+  .button-clear {
+  margin-right: 6rem;
   }
 
   .float-right{
@@ -340,22 +354,33 @@ footer > p {
 
   .container-1 {
   display: flex;
-  flex-direction: row;
-  flex: wrap;
   justify-content: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   }
+  
+  #sect-activities{
+  align-items: flex-start;
+  }
+
+  .container-0 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  padding-bottom: rem;
+  }
 
   .art-activities {
-  max-width: 30rem;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
   }
 
-  .container-1 > div > p {
-  border-left: 2px solid  rgba(55, 56, 103);
-  padding-left: 1rem;
+  .art-activities > div {
+  padding-left: 4rem;
   }
-
 }
 
 @media only screen and (min-width: 1025px) {
@@ -367,11 +392,6 @@ footer > p {
   display: flex;
   flex-direction: column;
   max-width: 25%;
-  background-color: rgba(170, 206, 155, 0.1);
-  }
-
-  #nav-1 {
-
   }
 
   #nav-1 input {
@@ -468,31 +488,86 @@ footer > p {
   }
 
   #sect-main {
+  padding-top: 1rem;
   display: flex;
+  background-color: rgba(170, 206, 155, 0.1);
   }
 
   #sect-welcome {
-  background-color: ;
-  background-image: url(/Users/lorenzomauro/Desktop/BaSP-M2023/assets/imgs/mision.png);
+  align-items: flex-start;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 3rem;
+  background-color: unset;
+  background-image: url(/Users/lorenzomauro/Desktop/BaSP-M2023/assets/imgs/main-image-back.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  border-radius: .5rem;
+  }
+
+  #sect-welcome > p {
+  width: 70%;
+  color: white;
+  }
+
+  #sect-welcome > h2  {
+  color: white;
+  }
+
+  #sect-welcome > h3 {
+  color: white;
   }
 
   #button-learn-more {
-  display: inline;
-  padding: 15px 32px;
-  margin-left: 30px;
-  border: none;
-  border-radius: 6px;
-  color: rgba(55, 56, 103);
-  background-color: rgba(170, 206, 155);
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
+  display: block;
+  margin-top: 2rem;
+  margin-left: .5rem;
+
   }
 
-  #sect-welcome > div >img {
+  #sect-welcome >img {
   display: none;
   }
 
+  .container-1 {
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  }
+
+  .container-1 > div > p {
+  width: 98%;
+  border-bottom: 1px solid  rgba(55, 56, 103);
+  padding-bottom: 1rem;
+  }
+
+  .container-1 > div {
+  padding-left: 1rem;
+  }
+
+    #sect-activities{
+  align-items: flex-start;
+  }
+
+  .container-0 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: rem;
+  }
+
+  .art-activities {
+  width: 50%;
+  max-width: 100rem;
+  align-items: center;
+  }
+
+  .art-activities > div {
+  padding-left: 4rem;
+  }
   }
