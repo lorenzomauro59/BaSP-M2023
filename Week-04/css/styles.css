@@ -12,8 +12,6 @@ h2, h3, h4 {
   display: none;
 }
 
-/* body */
-
 h2 {
   font-size: 3em;
 }
@@ -52,32 +50,6 @@ textarea {
   border: .1rem solid rgba(55, 56, 103, 0.4);
   border-radius: .5rem;
   box-sizing: border-box;
-}
-
-footer {
-  margin-top: 5rem;
-  border-top: .5rem rgba(170, 206, 155) solid;
-}
-
-footer > nav > ul{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 35rem;
-  padding-top: 1.5rem;
-  margin: 0 auto;
-}
-
-footer > nav > ul >li {
-  list-style-type: none;
-  padding: .1rem;
-  flex-grow: 1;
-}
-
-footer > p {
-  display: flex;
-  justify-content: center;
-  padding-top: 1rem;
 }
 
 #title-winner {
@@ -164,7 +136,6 @@ footer > p {
 
 #sect-activities {
   padding-left: 2rem;
-  align-items: center;
 }
 
 #pagination {
@@ -191,7 +162,7 @@ footer > p {
   flex-direction: column;
   justify-content: center;
   padding-top: 2rem;
-  padding-bottom: rem;
+  padding-bottom: 1rem;
 }
 
 .art-features{
@@ -245,6 +216,10 @@ footer > p {
   border-radius: .8em;
 }
 
+.container-1 > span {
+  display: none;
+  }
+
 .p1 {
   padding-left: 1.5em;
   color: rgba(55, 56, 103, 0.4);
@@ -255,11 +230,11 @@ footer > p {
 }
 
 .art-activities {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
   color: rgba(55, 56, 103);
-  font-size: 1em;
 }
 
 .art-activities > div > ol{
@@ -280,6 +255,7 @@ footer > p {
 .art-activities > img {
   width: 8.875rem;
   height: 8.875rem;
+  padding: 0;
 }
 
 .page-btn {
@@ -328,28 +304,21 @@ footer > p {
   justify-content: space-between;
   padding-bottom: 2rem;
   }
+  
+  .art-features > div {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  }
 
   #buttons {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-}
+  }
 
   .button-clear {
   margin-right: 6rem;
-  }
-
-  .float-right{
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 2rem;
-  float:right;
-  }
-
-  .float-left{
-  position:relative;
-  float:left;
   }
 
   .container-1 {
@@ -358,7 +327,22 @@ footer > p {
   padding-top: 1rem;
   padding-bottom: 1rem;
   }
-  
+
+  .img-none {
+  display: none;
+  }
+
+  .container-1 > span {
+  display: flex;
+  justify-content: center;
+  width: 48vw;
+  }
+
+  .container-1 > span > img{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  }
+
   #sect-activities{
   align-items: flex-start;
   }
@@ -381,6 +365,8 @@ footer > p {
   .art-activities > div {
   padding-left: 4rem;
   }
+
+  
 }
 
 @media only screen and (min-width: 1025px) {
@@ -432,6 +418,8 @@ footer > p {
   text-decoration: none;
   font-size: 1rem;
   text-decoration: none;
+  font-weight: bold;
+
   }
 
   #nav-1 > nav > ul > li > a:hover{
@@ -496,12 +484,14 @@ footer > p {
   #sect-welcome {
   align-items: flex-start;
   width: 100%;
-  padding: 2rem;
+  height:98%;
+  padding: 2rem 2rem 6rem 3rem;
   margin-top: 3rem;
   background-color: unset;
   background-image: url(/Users/lorenzomauro/Desktop/BaSP-M2023/assets/imgs/main-image-back.png);
   background-repeat: no-repeat;
-  border-radius: .5rem;
+  border-radius: .6rem;
+  background-size: cover;
   }
 
   #sect-welcome > p {
@@ -521,11 +511,29 @@ footer > p {
   display: block;
   margin-top: 2rem;
   margin-left: .5rem;
-
   }
 
-  #sect-welcome >img {
+  #sect-welcome > img {
   display: none;
+  }
+
+  .container-0 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: rem;
+  }
+
+  .form-1 {
+  width: 33%;
+  display: inline-block;
+  }
+
+  form > select {
+  width: 50%;
   }
 
   .container-1 {
@@ -547,18 +555,16 @@ footer > p {
   padding-left: 1rem;
   }
 
-    #sect-activities{
-  align-items: flex-start;
+  .container-1 img {
+  display: flex;
   }
 
-  .container-0 {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding-top: 2rem;
-  padding-bottom: rem;
+  .container-1 > span {
+  display: none;
+  }
+
+  #sect-activities{
+  align-items: flex-start;
   }
 
   .art-activities {
@@ -568,6 +574,12 @@ footer > p {
   }
 
   .art-activities > div {
-  padding-left: 4rem;
+  padding-left: 3rem;
   }
+
+  .page-btn:nth-child(5),
+  .page-btn:nth-child(6) {
+    display: inline;
   }
+
+}
