@@ -14,7 +14,7 @@ During week, we styled a landing page using CSS to achieve a pixel-perfect desig
 
 ## Week 04
 During this week, we created a responsive landing page with a mobile-first approach. We utilized Flexbox to achieve a flexible and responsive layout for the website.
-link: 
+link: https://lorenzomauro59.github.io/BaSP-M2023/Week-04/index.html 
 
 
 ## Autor: Lorenzo Mauro
