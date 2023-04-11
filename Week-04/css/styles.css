@@ -97,8 +97,9 @@ textarea {
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
-  border-top: 1px solid rgb(221, 225, 227);
   padding-top: 2rem;
+  border-top: 1px solid rgb(221, 225, 227);
+
 }
 
 #sect-features p {
@@ -108,10 +109,10 @@ textarea {
 }
 
 #buttons {
-  height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 10rem;
   align-items: center;
 }
 
@@ -123,8 +124,8 @@ textarea {
 }
 
 #border-p {
-  border-left: 5px solid  rgba(55, 56, 103);
   padding-left: 1em;
+  border-left: 5px solid  rgba(55, 56, 103);
 }
 
 #art-history p {
@@ -142,9 +143,9 @@ textarea {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 45rem;
   margin: 0 auto;
   padding-top: 3rem;
-  max-width: 45rem;
 }
 
 .uppercase {
@@ -178,11 +179,11 @@ textarea {
 }
 
 .button-submit {
+  width: 10rem;
+  padding: 1rem 2rem;
   background-color: rgba(170, 206, 155);
   border: none;
   color: rgba(55, 56, 103);
-  width: 10rem;
-  padding: 1rem 2rem;
   text-align: center;
   font-size: 1em;
   border-radius: .5rem;
@@ -190,11 +191,11 @@ textarea {
 }
 
 .button-clear {
+  width: 10rem;
+  padding: 1rem 2rem;
   background-color: white;
   border-color: rgba(55, 56, 103);
   color: rgba(55, 56, 103);
-  width: 10rem;
-  padding: 1rem 2rem;
   text-align: center;
   font-size: 1em;
   border-radius: .5rem;
@@ -211,8 +212,8 @@ textarea {
 }
 
 .container-1 img {
-  margin-top: 2rem;
   width: 100%;
+  margin-top: 2rem;
   border-radius: .8em;
 }
 
@@ -274,8 +275,6 @@ textarea {
   display: none;
 }
 
-/* media queries */ 
-
 @media only screen and (min-width: 601px) {
   #sect-welcome{
   display: flex;
@@ -292,16 +291,15 @@ textarea {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: ; 
   padding-top: 2rem;
   padding-bottom: 1rem;
   }
 
   .art-features {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
   padding-bottom: 2rem;
   }
   
@@ -394,14 +392,14 @@ textarea {
   }
 
   #nav-1 > nav > h3 {
-  padding-top: .5rem;
   width: 40%;
+  padding-top: .5rem;
   height: 3rem;
   border-bottom: .2rem solid rgba(170, 206, 155); 
   }
 
   #nav-1 > nav > ul {
-    padding: 0;
+  padding: 0;
   }
 
   #nav-1 > nav > ul > li{
@@ -419,7 +417,6 @@ textarea {
   font-size: 1rem;
   text-decoration: none;
   font-weight: bold;
-
   }
 
   #nav-1 > nav > ul > li > a:hover{
@@ -488,12 +485,12 @@ textarea {
   padding: 2rem 2rem 6rem 3rem;
   margin-top: 3rem;
   background-color: unset;
-  background-image: url(/Users/lorenzomauro/Desktop/BaSP-M2023/assets/imgs/main-image-back.png);
+  background-image: url(../../../BaSP-M2023/assets/imgs/main-image-back.png);
   background-repeat: no-repeat;
   border-radius: .6rem;
   background-size: cover;
   }
-
+  
   #sect-welcome > p {
   width: 70%;
   color: white;
@@ -528,8 +525,8 @@ textarea {
   }
 
   .form-1 {
-  width: 33%;
   display: inline-block;
+  width: 33%;
   }
 
   form > select {

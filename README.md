@@ -13,7 +13,8 @@ During week, we structured a webpage using HTML with an emphasis on semantic tag
 During week, we styled a landing page using CSS to achieve a pixel-perfect design without responsiveness. We explored various CSS techniques and created a separate CSS file for the project.
 
 ## Week 04
-
+During this week, we created a responsive landing page with a mobile-first approach. We utilized Flexbox to achieve a flexible and responsive layout for the website.
+link: 
 
 
 ## Autor: Lorenzo Mauro
