@@ -28,7 +28,7 @@ var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Ag
 meses.unshift('Meses:');
 meses.push('Ultimo mes')
 
-console.log(meses)
+console.log(meses);
 
 // Quitar un elemento del principio y del final del array (utilizar shift y pop).
 
@@ -37,9 +37,9 @@ console.log('-Exercise 3.d:');
 var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
 meses.shift('');
-meses.pop('')
+meses.pop('');
 
-console.log(meses)
+console.log(meses);
 
 // Invertir el orden del array (utilizar reverse).
 
@@ -47,9 +47,9 @@ console.log('-Exercise 3.e:');
 
 var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
-meses.reverse()
+meses.reverse();
 
-console.log(meses)
+console.log(meses);
 
 // Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
 
@@ -59,14 +59,14 @@ var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Ag
 
 var mesesJuntos = meses.join('-');
 
-console.log(mesesJuntos)
+console.log(mesesJuntos);
 
 // Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 
-console.log('-Exercise 3.e:');
+console.log('-Exercise 3.g:');
 
 var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
 var mesesParte = meses.slice(4, 11);
 
-console.log(mesesParte)
+console.log(mesesParte);
