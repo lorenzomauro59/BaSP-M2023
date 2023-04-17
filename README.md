@@ -17,6 +17,9 @@ During this week, we created a responsive landing page with a mobile-first appro
 link: https://lorenzomauro59.github.io/BaSP-M2023/Week-04/index.html 
 
 ## Week 05
+During this week, we focused on the fundamentals of JavaScript. We created a folder of exercises to practice the concepts we learned, with each exercise being written in a separate JavaScript file (.js). Each JavaScript file covered a specific topic related to JavaScript fundamentals, such as variables and operators, strings, arrays, if-else statements, for, and functions.
 
+Each JavaScript file was linked to a corresponding HTML file for the week, allowing us to view and execute the exercises within a web browser. Through this practice, we were able to apply the knowledge we had gained in JavaScript in a practical way, helping us gain a deeper understanding of the language's fundamentals.
+link: https://lorenzomauro59.github.io/BaSP-M2023/Week-05/index.html
 
 ## Autor: Lorenzo Mauro
