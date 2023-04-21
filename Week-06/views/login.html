@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../Week-06/css/reset.css" />
     <link rel="stylesheet" href="../../Week-06/css/styles.css" />
+    <link rel="stylesheet" href="../../Week-06/css/main.css" />
     <link rel="stylesheet" href="../../Week-06/css/header.css" />
     <link rel="stylesheet" href="../../Week-06/css/footer.css" />
     <link rel="stylesheet" href="../../Week-06/css/login.css" />
+    <script src="../../Week-06/js/login.js"></script>
     <title>Log in - Mega Rocket</title>
   </head>
   <body>
@@ -30,8 +32,10 @@
           <form>
             <label class="label-2" for="email">Email:</label>
             <input type="text" id="email" name="email" />
+            <p id="emailError"></p>
+            <p id="emailError-2"></p>
             <label class="label-2" for="pass">Password:</label>
-            <input type="text" id="pass" name="pass" />
+            <input type="password" id="pass" name="pass" />
             <div class="buttons-1">
               <input class="button-sign-up" type="button" value="Home" />
               <input class="button-login" type="submit" value="Log in" />

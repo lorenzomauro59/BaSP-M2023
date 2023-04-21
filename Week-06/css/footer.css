@@ -1,9 +1,9 @@
 footer {
-  margin-top: 5rem;
-  border-top: .5rem rgba(170, 206, 155) solid;
+  margin-top: 0rem;
+  border-top: 0.5rem rgba(170, 206, 155) solid;
 }
 
-footer > nav > ul{
+footer > nav > ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,9 +12,9 @@ footer > nav > ul{
   margin: 0 auto;
 }
 
-footer > nav > ul >li {
+footer > nav > ul > li {
   list-style-type: none;
-  padding: .1rem;
+  padding: 0.1rem;
   flex-grow: 1;
 }
 
@@ -23,4 +23,3 @@ footer > p {
   justify-content: center;
   padding-top: 1rem;
 }
-
