@@ -12,15 +12,37 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
   padding: 10%;
   background-color: white;
 }
 
+#emailError {
+  display: none;
+}
+
+#emailError-2 {
+  display: none;
+}
+
+#passError {
+  display: none;
+}
+
+#passError-2 {
+  display: none;
+}
+
+#button-login-flex {
+  display: flex;
+  justify-content: center;
+}
+
 .button-login {
-  width: 8rem;
-  padding: 1rem 2rem;
+  width: 14rem;
+  padding: 1rem 1rem;
+  margin-top: 2rem;
   background-color: white;
   border-color: rgba(55, 56, 103);
   color: rgba(55, 56, 103);
@@ -32,8 +54,9 @@ input {
 
 .button-sign-up {
   width: 8rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   margin-right: 1rem;
+  margin-left: 1rem;
   background-color: white;
   border-color: rgba(55, 56, 103);
   color: rgba(55, 56, 103);
@@ -45,7 +68,7 @@ input {
 
 .buttons-1 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 5%;
+  margin-top: 2rem;
 }
