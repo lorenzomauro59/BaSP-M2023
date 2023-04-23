@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../../Week-06/css/header.css" />
     <link rel="stylesheet" href="../../Week-06/css/footer.css" />
     <link rel="stylesheet" href="../../Week-06/css/sign-up.css" />
-    <script src="../../Week-06/js/login.js"></script>
-    <title>Log in - Mega Rocket</title>
+    <script src="../../Week-06/js/sign-up.js"></script>
+    <title>Register - Mega Rocket</title>
   </head>
   <body>
     <header>
@@ -32,39 +32,38 @@
           <form>
             <label class="label-2" for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Name" />
-            <p id="nameError">This field is required</p>
-            <p id="nameError-2">
+            <p id="name-error">This field is required</p>
+            <p id="name-error-2">
               This field must contain letters only and must be more than 3
               letters.
             </p>
-            <label class="label-2" for="second-name">Second Name</label>
+            <label class="label-2" for="last-name">Last Name</label>
             <input
-              type="password"
+              type="text"
               id="l-name"
               name="l-name"
-              placeholder="Second Name"
+              placeholder="Last Name"
             />
-            <p id="lnameError">This field is required</p>
-            <p id="lnameError-2">
-              This fiedl must contain letters only and must be more than 3
+            <p id="lname-error">This field is required</p>
+            <p id="lname-error-2">
+              This field must contain letters only and must be more than 3
               letters.
             </p>
             <label class="label-2" for="dni">DNI</label>
             <input type="text" id="dni" name="dni" placeholder="DNI" />
-            <p id="dniError">This field is required</p>
-            <p id="dniError-2">
+            <p id="dni-error">This field is required</p>
+            <p id="dni-error-2">
               This field must contain numbers only and must have more than 7
               numbers.
             </p>
             <label class="label-2" for="dni">Birth Date</label>
             <input type="date" id="date" name="date" />
-            <p id="dateError">This field is required</p>
+            <p id="date-error">This field is required</p>
             <label class="label-2" for="tel">Telephone</label>
             <input type="text" id="tel" name="tel" placeholder="Telephone" />
-            <p id="telError">This field is required</p>
-            <p id="telError-2">
-              This field must contain numbers only and must have more than 10
-              numbers.
+            <p id="tel-error">This field is required</p>
+            <p id="tel-error-2">
+              This field must contain numbers only and must have 10 numbers.
             </p>
             <label class="label-2" for="address">Address</label>
             <input
@@ -73,15 +72,15 @@
               name="address"
               placeholder="Address"
             />
-            <p id="addressError">This field is required</p>
-            <p id="addressError-2">
+            <p id="address-error">This field is required</p>
+            <p id="address-error-2">
               This field must contain at least 5 characters with letters,
               numbers and a space in between.
             </p>
             <label class="label-2" for="city">City</label>
             <input type="text" id="city" name="city" placeholder="City" />
-            <p id="cityError">This field is required</p>
-            <p id="cityError-2">
+            <p id="city-error">This field is required</p>
+            <p id="city-error-2">
               This field must contain Alphanumeric text and must have more than
               3 letters.
             </p>
@@ -92,15 +91,15 @@
               name="postalcode"
               placeholder="Postal Code"
             />
-            <p id="postalcodeError">This field is required</p>
-            <p id="postalcodeError-2">
+            <p id="postalcode-error">This field is required</p>
+            <p id="postalcode-error-2">
               This field must contain numbers only and must have between 4 and 5
               numbers.
             </p>
             <label class="label-2" for="email">Email:</label>
             <input type="text" id="email" name="email" placeholder="Email" />
-            <p id="emailError">This field is required</p>
-            <p id="emailError-2">Enter a valid email address</p>
+            <p id="email-error">This field is required</p>
+            <p id="email-error-2">Enter a valid email address</p>
             <label class="label-2" for="pass">Password:</label>
             <input
               type="password"
@@ -108,8 +107,8 @@
               name="pass"
               placeholder="Password"
             />
-            <p id="passError">This field is required</p>
-            <p id="passError-2">
+            <p id="pass-error">This field is required</p>
+            <p id="pass-error-2">
               Password must contain letters and numbers, and at least contains 8
               characters
             </p>
@@ -126,7 +125,7 @@
               characters
             </p>
             <div id="button-sign-in-flex">
-              <button class="button-login" type="submit">Sign in</button>
+              <button class="button-login" type="submit">Register</button>
             </div>
             <div class="buttons-1">
               <a href="../views/index.html"

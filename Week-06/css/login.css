@@ -18,19 +18,19 @@ input {
   background-color: white;
 }
 
-#emailError {
+#emailerror {
   display: none;
 }
 
-#emailError-2 {
+#emailerror-2 {
   display: none;
 }
 
-#passError {
+#passerror {
   display: none;
 }
 
-#passError-2 {
+#passerror-2 {
   display: none;
 }
 

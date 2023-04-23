@@ -12,6 +12,90 @@ section {
   background-color: rgb(217, 217, 217);
 }
 
+#name-error {
+  display: none;
+}
+
+#name-error-2 {
+  display: none;
+}
+
+#lname-error {
+  display: none;
+}
+
+#lname-error-2 {
+  display: none;
+}
+
+#dni-error {
+  display: none;
+}
+
+#dni-error-2 {
+  display: none;
+}
+
+#date-error {
+  display: none;
+}
+
+#tel-error {
+  display: none;
+}
+
+#tel-error-2 {
+  display: none;
+}
+
+#address-error {
+  display: none;
+}
+
+#address-error-2 {
+  display: none;
+}
+
+#city-error {
+  display: none;
+}
+
+#city-error-2 {
+  display: none;
+}
+
+#postalcode-error {
+  display: none;
+}
+
+#postalcode-error-2 {
+  display: none;
+}
+
+#email-error {
+  display: none;
+}
+
+#email-error-2 {
+  display: none;
+}
+
+#pass-error {
+  display: none;
+}
+
+#pass-error-2 {
+  display: none;
+}
+
+#pass-r-error {
+  display: none;
+}
+
+#pass-r-error-2 {
+  display: none;
+}
+
 #form-group {
   display: flex;
   flex-direction: column;
