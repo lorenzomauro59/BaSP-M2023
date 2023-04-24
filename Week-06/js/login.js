@@ -1,72 +1,96 @@
 window.onload = function () {
-  var emailInput = document.querySelector("#email");
-  var errorElement = document.getElementById("emailError");
-  var errorElement2 = document.getElementById("emailError-2");
+  var inputEmail = document.getElementById("email");
+  var emailError = document.getElementById("email-error");
+  var emailError2 = document.getElementById("email-error-2");
 
-  emailInput.onblur = function () {
-    if (emailInput.value === "") {
-      errorElement.style.display = "flex";
+  inputEmail.addEventListener("blur", function () {
+    if (inputEmail.value === "") {
+      emailError.style.display = "flex";
     } else {
-      errorElement.style.display = "none";
+      emailError.style.display = "none";
     }
-
-    var emailExpression = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-
-    if (!emailExpression.test(emailInput.value)) {
-      errorElement2.style.display = "flex";
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regex.test(inputEmail.value)) {
+      emailError2.style.display = "flex";
     } else {
-      errorElement2.style.display = "none";
+      emailError2.style.display = "none";
     }
+  });
 
-    emailInput.onfocus = function () {
-      errorElement.style.display = "none";
-      errorElement2.style.display = "none";
-    };
+  inputEmail.onfocus = function () {
+    emailError.style.display = "none";
+    emailError2.style.display = "none";
   };
 
   var passInput = document.querySelector("#pass");
-  var errorPass = document.getElementById("passError");
-  var errorPass2 = document.getElementById("passError-2");
+  var passError = document.getElementById("pass-error");
+  var passError2 = document.getElementById("pass-error-2");
 
-  passInput.onblur = function () {
+  function hasNumbers(myString) {
+    var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+
+    for (var x = 0; x < myString.length; x++) {
+      if (numbers.includes(myString[x])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function hasNumbersAndChar(myString) {
+    var num = 0;
+    var char = 0;
+
+    for (var x = 0; x < myString.length; x++) {
+      if (hasNumbers(myString[x])) {
+        num++;
+      } else {
+        char++;
+      }
+      if (num > 0 && char > 0) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  passInput.addEventListener("blur", function () {
     if (passInput.value === "") {
-      errorPass.style.display = "flex";
+      passError.style.display = "flex";
     } else {
-      errorPass.style.display = "none";
+      passError.style.display = "none";
     }
 
-    var passExpression = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-
-    if (!passExpression.test(passInput.value)) {
-      errorPass2.style.display = "flex";
+    if (!hasNumbersAndChar(passInput.value)) {
+      passError2.style.display = "flex";
     } else {
-      errorPass2.style.display = "none";
+      passError2.style.display = "none";
     }
+  });
 
-    passInput.onfocus = function () {
-      errorPass.style.display = "none";
-      errorPass2.style.display = "none";
-    };
+  passInput.onfocus = function () {
+    passError.style.display = "none";
+    passError2.style.display = "none";
   };
 
   var buttonLogin = document.querySelector(".button-login");
   var emailInput = document.querySelector("#email");
   var passInput = document.querySelector("#pass");
-  var emailExpression = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-  var passExpression = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+  var regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
   buttonLogin.onclick = function (e) {
     e.preventDefault();
     if (emailInput.value === "" || passInput.value === "") {
       alert("Complete the fields");
     } else {
-      if (
-        emailExpression.test(emailInput.value) &&
-        passExpression.test(passInput.value)
-      ) {
+      if (regex.test(emailInput.value) && hasNumbersAndChar(passInput.value)) {
         alert(`Email: ${emailInput.value} Password: ${passInput.value}`);
-      } else {
-        alert("Complete the fields correctly");
+      }
+      if (!regex.test(emailInput.value)) {
+        alert("Enter a valid email address");
+      }
+      if (!hasNumbersAndChar(passInput.value)) {
+        alert("Password must contain letters and numbers");
       }
     }
   };

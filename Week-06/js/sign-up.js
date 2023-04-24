@@ -3,21 +3,42 @@ window.onload = function () {
   var nameError = document.getElementById("name-error");
   var nameError2 = document.getElementById("name-error-2");
 
+  function moreThan3Char() {
+    var nameValue = inputName.value.trim();
+    if (nameValue.length <= 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function lettersOnly() {
+    var inputValue = inputName.value;
+
+    for (var i = 0; i < inputValue.length; i++) {
+      var charCode = inputValue.charCodeAt(i);
+      if (
+        !(charCode > 64 && charCode < 91) &&
+        !(charCode > 96 && charCode < 123)
+      ) {
+        return true;
+      }
+    }
+  }
+
   inputName.addEventListener("blur", function () {
     if (inputName.value === "") {
       nameError.style.display = "flex";
     } else {
       nameError.style.display = "none";
     }
-    var nameValue = inputName.value.trim();
-    if (nameValue.length <= 3) {
+
+    if (moreThan3Char(inputName.value)) {
       nameError2.style.display = "flex";
-    }
-    for (let i = 0; i < inputName.value.length; i++) {
-      var char = inputName.value.toUpperCase().charAt(i);
-      if (!(char >= "A" && char <= "Z")) {
-        nameError2.style.display = "flex";
-      }
+    } else if (lettersOnly(inputName.value)) {
+      nameError2.style.display = "flex";
+    } else {
+      nameError2.style.display = "none";
     }
   });
 
@@ -30,21 +51,42 @@ window.onload = function () {
   var lnameError = document.getElementById("lname-error");
   var lnameError2 = document.getElementById("lname-error-2");
 
+  function moreThan3CharLn() {
+    var nameValue = inputLastName.value.trim();
+    if (nameValue.length <= 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function lettersOnlyLn() {
+    var inputValue = inputLastName.value;
+
+    for (var i = 0; i < inputValue.length; i++) {
+      var charCode = inputValue.charCodeAt(i);
+      if (
+        !(charCode > 64 && charCode < 91) &&
+        !(charCode > 96 && charCode < 123)
+      ) {
+        return true;
+      }
+    }
+  }
+
   inputLastName.addEventListener("blur", function () {
     if (inputLastName.value === "") {
       lnameError.style.display = "flex";
     } else {
       lnameError.style.display = "none";
     }
-    var lnameValue = inputLastName.value.trim();
-    if (lnameValue.length <= 3) {
+
+    if (moreThan3CharLn(inputLastName.value)) {
       lnameError2.style.display = "flex";
-    }
-    for (let i = 0; i < inputLastName.value.length; i++) {
-      var char = inputLastName.value.toUpperCase().charAt(i);
-      if (!(char >= "A" && char <= "Z")) {
-        lnameError2.style.display = "flex";
-      }
+    } else if (lettersOnlyLn(inputLastName.value)) {
+      lnameError2.style.display = "flex";
+    } else {
+      lnameError2.style.display = "none";
     }
   });
 
@@ -57,16 +99,25 @@ window.onload = function () {
   var dniError = document.getElementById("dni-error");
   var dniError2 = document.getElementById("dni-error-2");
 
+  function validateDni() {
+    var dniValue = inputDni.value.trim();
+    if (dniValue.length < 7) {
+      return true;
+    } else if (isNaN(dniValue)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   inputDni.addEventListener("blur", function () {
     if (inputDni.value === "") {
       dniError.style.display = "flex";
     } else {
       dniError.style.display = "none";
     }
-    var dniValue = inputDni.value.trim();
-    if (dniValue.length <= 7) {
-      dniError2.style.display = "flex";
-    } else if (isNaN(dniValue)) {
+
+    if (validateDni(inputDni.value)) {
       dniError2.style.display = "flex";
     } else {
       dniError2.style.display = "none";
@@ -97,18 +148,26 @@ window.onload = function () {
   var telError = document.getElementById("tel-error");
   var telError2 = document.getElementById("tel-error-2");
 
+  function validateTel() {
+    var telValue = inputTel.value.trim();
+    if (telValue.length !== 10) {
+      return true;
+    } else if (isNaN(telValue)) {
+      return true;
+    }
+  }
+
   inputTel.addEventListener("blur", function () {
     if (inputTel.value === "") {
       telError.style.display = "flex";
     } else {
       telError.style.display = "none";
     }
-    var telValue = inputTel.value.trim();
-    if (telValue.length !== 10) {
+
+    if (validateTel(inputTel.value)) {
       telError2.style.display = "flex";
-    } else if (isNaN(telValue)) {
-      telError2.style.display = "flex";
-      return;
+    } else {
+      telError2.style.display = "none";
     }
   });
 
@@ -121,16 +180,10 @@ window.onload = function () {
   var addressError = document.getElementById("address-error");
   var addressError2 = document.getElementById("address-error-2");
 
-  inputAddress.addEventListener("blur", function () {
-    if (inputAddress.value === "") {
-      addressError.style.display = "flex";
-    } else {
-      addressError.style.display = "none";
-    }
+  function validateAddress() {
     var addressValue = inputAddress.value.trim();
     if (addressValue.length < 5) {
-      addressError2.style.display = "flex";
-      return;
+      return true;
     }
     var hasLetter = false;
     var hasNumber = false;
@@ -147,8 +200,21 @@ window.onload = function () {
       }
     }
     if (!(hasLetter && hasNumber && hasSpace)) {
+      return true;
+    }
+  }
+
+  inputAddress.addEventListener("blur", function () {
+    if (inputAddress.value === "") {
+      addressError.style.display = "flex";
+    } else {
+      addressError.style.display = "none";
+    }
+
+    if (validateAddress(inputAddress.value)) {
       addressError2.style.display = "flex";
-      return;
+    } else {
+      addressError2.style.display = "none";
     }
   });
 
@@ -161,6 +227,24 @@ window.onload = function () {
   var cityError = document.getElementById("city-error");
   var cityError2 = document.getElementById("city-error-2");
 
+  function validateCity() {
+    var cityValue = inputCity.value;
+    if (cityValue.length < 3) {
+      return true;
+    } else {
+      for (var i = 0; i < cityValue.length; i++) {
+        var charCode = cityValue.charCodeAt(i);
+        if (
+          !(charCode >= 48 && charCode <= 57) &&
+          !(charCode >= 65 && charCode <= 90) &&
+          !(charCode >= 97 && charCode <= 122)
+        ) {
+          return true;
+        }
+      }
+    }
+  }
+
   inputCity.addEventListener("blur", function () {
     if (inputCity.value === "") {
       cityError.style.display = "flex";
@@ -168,16 +252,11 @@ window.onload = function () {
       cityError.style.display = "none";
     }
 
-    if (inputCity.length > 3) {
-      for (var i = 0; i < inputCity.length; i++) {
-        var char = inputCity.charAt(i);
-        if (!char.match(/[a-zA-Z0-9]/)) {
-          return false;
-        }
-      }
-      return true;
+    if (validateCity(inputCity.value)) {
+      cityError2.style.display = "flex";
+    } else {
+      cityError2.style.display = "none";
     }
-    return false;
   });
 
   inputCity.onfocus = function () {
@@ -189,16 +268,25 @@ window.onload = function () {
   var postalCodeError = document.getElementById("postalcode-error");
   var postalCodeError2 = document.getElementById("postalcode-error-2");
 
+  function validatePostalCode() {
+    var value = inputPostalCode.value.trim();
+    if (!/^\d+$/.test(value)) {
+      return true;
+    } else if (value.length < 4 || value.length > 5) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   inputPostalCode.addEventListener("blur", function () {
     if (inputPostalCode.value === "") {
       postalCodeError.style.display = "flex";
     } else {
       postalCodeError.style.display = "none";
     }
-    var value = inputPostalCode.value.trim();
-    if (!/^\d+$/.test(value)) {
-      postalCodeError2.style.display = "flex";
-    } else if (value.length < 4 || value.length > 5) {
+
+    if (validatePostalCode(inputPostalCode.value)) {
       postalCodeError2.style.display = "flex";
     } else {
       postalCodeError2.style.display = "none";
@@ -237,19 +325,14 @@ window.onload = function () {
   var passError = document.getElementById("pass-error");
   var passError2 = document.getElementById("pass-error-2");
 
-  inputPass.addEventListener("blur", function () {
-    if (inputPass.value === "") {
-      passError.style.display = "flex";
-    } else {
-      passError.style.display = "none";
-    }
+  function validatePass() {
     var passValue = inputPass.value;
     var hasLetter = false;
     var hasNumber = false;
 
     if (passValue.length < 8) {
       passError2.style.display = "flex";
-      return;
+      return true;
     }
 
     for (var i = 0; i < passValue.length; i++) {
@@ -261,6 +344,20 @@ window.onload = function () {
     }
 
     if (!hasLetter || !hasNumber) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  inputPass.addEventListener("blur", function () {
+    if (inputPass.value === "") {
+      passError.style.display = "flex";
+    } else {
+      passError.style.display = "none";
+    }
+
+    if (validatePass(inputPass.value)) {
       passError2.style.display = "flex";
     } else {
       passError2.style.display = "none";
@@ -276,19 +373,14 @@ window.onload = function () {
   var passrError = document.getElementById("pass-r-error");
   var passrError2 = document.getElementById("pass-r-error-2");
 
-  inputPassr.addEventListener("blur", function () {
-    if (inputPassr.value === "") {
-      passrError.style.display = "flex";
-    } else {
-      passrError.style.display = "none";
-    }
+  function validatePassr() {
     var passrValue = inputPassr.value;
     var hasLetter = false;
     var hasNumber = false;
 
     if (passrValue.length < 8) {
       passrError2.style.display = "flex";
-      return;
+      return true;
     }
 
     for (var i = 0; i < passrValue.length; i++) {
@@ -300,6 +392,20 @@ window.onload = function () {
     }
 
     if (!hasLetter || !hasNumber) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  inputPassr.addEventListener("blur", function () {
+    if (inputPassr.value === "") {
+      passrError.style.display = "flex";
+    } else {
+      passrError.style.display = "none";
+    }
+
+    if (validatePassr(inputPassr.value)) {
       passrError2.style.display = "flex";
     } else {
       passrError2.style.display = "none";
