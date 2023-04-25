@@ -301,6 +301,7 @@ window.onload = function () {
   var inputEmail = document.getElementById("email");
   var emailError = document.getElementById("email-error");
   var emailError2 = document.getElementById("email-error-2");
+  var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   inputEmail.addEventListener("blur", function () {
     if (inputEmail.value === "") {
@@ -308,7 +309,7 @@ window.onload = function () {
     } else {
       emailError.style.display = "none";
     }
-    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!regex.test(inputEmail.value)) {
       emailError2.style.display = "flex";
     } else {
@@ -415,5 +416,98 @@ window.onload = function () {
   inputPassr.onfocus = function () {
     passrError.style.display = "none";
     passrError2.style.display = "none";
+  };
+
+  var buttonRegister = document.querySelector(".button-register");
+
+  buttonRegister.onclick = function (e) {
+    e.preventDefault();
+    if (
+      inputName.value === "" ||
+      inputLastName.value === "" ||
+      inputDni.value === "" ||
+      inputDate.value === "" ||
+      inputTel.value === "" ||
+      inputAddress.value === "" ||
+      inputCity.value === "" ||
+      inputPostalCode.value === "" ||
+      inputEmail.value === "" ||
+      inputPass.value === "" ||
+      inputPassr.value === ""
+    ) {
+      alert("Complete the fields");
+    } else {
+      if (
+        !moreThan3Char(inputName.value) &&
+        !lettersOnly(inputName.value) &&
+        !moreThan3CharLn(inputLastName.value) &&
+        !lettersOnlyLn(inputLastName.value) &&
+        !validateDni(inputDni.value) &&
+        inputDate.value &&
+        !validateTel(inputTel.value) &&
+        !validateAddress(inputAddress.value) &&
+        !validateCity(inputCity.value) &&
+        !validatePostalCode(inputPostalCode.value) &&
+        regex.test(inputEmail.value) &&
+        !validatePass(inputPass.value) &&
+        !validatePassr(inputPassr.value)
+      ) {
+        alert(
+          `Name: ${inputName.value} Last Name: ${inputLastName.value} Dni: ${inputDni.value} 
+          Birth Date: ${inputDate.value} Telephone: ${inputTel.value} Address: ${inputAddress.value}
+          City: ${inputCity.value} Postal Code: ${inputPostalCode.value} Email: ${inputEmail.value} 
+          Password: ${inputPass.value} Password Repeat: ${inputPassr.value}`
+        );
+      }
+
+      if (moreThan3Char(inputName.value) || lettersOnly(inputName.value)) {
+        alert(
+          "Name: This field must contain letters only and must be more than 3 letters."
+        );
+      }
+      if (moreThan3CharLn(inputName.value) || lettersOnlyLn(inputName.value)) {
+        alert(
+          "Last Name: This field must contain letters only and must be more than 3 letters."
+        );
+      }
+      if (validateDni(inputDni.value)) {
+        alert(
+          "Dni: This field must contain numbers only and must have more than 7 numbers."
+        );
+      }
+      if (validateTel(inputTel.value)) {
+        alert(
+          "Tel: This field must contain numbers only and must have 10 numbers."
+        );
+      }
+      if (validateAddress(inputAddress.value)) {
+        alert(
+          "Address: This field must contain at least 5 characters with letters, numbers and a space in between."
+        );
+      }
+      if (validateCity(inputCity.value)) {
+        alert(
+          "City: This field must contain Alphanumeric text and must have more than 3 letters."
+        );
+      }
+      if (validatePostalCode(inputPostalCode.value)) {
+        alert(
+          "Postal Code: This field must contain numbers only and must have between 4 and 5 numbers."
+        );
+      }
+      if (!regex.test(inputEmail.value)) {
+        alert("Email: Enter a valid email address");
+      }
+      if (validatePass(inputPass.value)) {
+        alert(
+          "Password: This field must contain letters and numbers, and at least contains 8 characters"
+        );
+      }
+      if (validatePassr(inputPassr.value)) {
+        alert(
+          "Password Repeat: This field must contain letters and numbers, and at least contains 8 characters"
+        );
+      }
+    }
   };
 };

@@ -125,7 +125,7 @@ section {
   justify-content: center;
 }
 
-.button-login {
+.button-register {
   width: 14rem;
   padding: 1rem 1rem;
   margin-top: 2rem;
@@ -157,4 +157,31 @@ section {
   justify-content: space-around;
   align-items: center;
   margin-top: 2rem;
+}
+
+/* @media only screen and (min-width: 601px) {
+  form {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .inputs-form {
+    margin-right: 1rem;
+  }
+} */
+
+@media only screen and (min-width: 1025px) {
+  form {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .inputs-form {
+    width: 100%;
+    margin-right: 1rem;
+  }
+
+  .pairs {
+    display: flex;
+  }
 }
