@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../Week-06/css/styles.css" />
     <link rel="stylesheet" href="../../Week-06/css/header.css" />
     <link rel="stylesheet" href="../../Week-06/css/footer.css" />
+    <script src="../../Week-06/js/contact.js"></script>
     <title>Mega Rocket</title>
   </head>
   <body>
@@ -202,28 +203,37 @@
       <form>
         <div class="form-1">
           <label class="label-2">Name</label>
-          <input type="text" name="fname" />
+          <input id="name" type="text" name="name" placeholder="Name" />
+          <p id="name-error">This field is required</p>
+          <p id="name-error-2">
+            This field must contain letters only and must be more than 3
+            letters.
+          </p>
         </div>
         <div class="form-1">
           <label class="label-2">Last name</label>
-          <input type="text" name="lname" />
+          <input id="l-name" type="text" name="lname" placeholder="Last Name"/>
+          <p id="lname-error">This field is required</p>
+          <p id="lname-error-2">
+            This field must contain letters only and must be more than 3
+            letters.
+          </p>
         </div>
         <div class="form-1">
           <label class="label-2">Email</label>
-          <input type="email" name="email" />
+          <input id="email" type="text" name="email" placeholder="Email" />
+          <p id="email-error">This field is required</p>
+          <p id="email-error-2">Enter a valid email address</p>
         </div>
         <label class="label-2">Contact Reason</label>
-        <select id="option" name="contact-reason">
-          <option value="opcion1">
-            I want to know about membership and cost
-          </option>
-          <option value="opcion2">
-            I want to make a question or suggestion
-          </option>
-          <option value="opcion3">I want to make a contact</option>
-        </select>
+        <input id="contact-area" type="text" name="contact-area" />
         <label class="label-2">Message</label>
-        <textarea name="message" placeholder="Write here"></textarea>
+        <input id="message" type="text" name="message" placeholder="Write here"></input>
+          <p id="message-error">This field is required</p>
+          <p id="message-error-2">
+            This field must contain Alphanumeric text and must have more
+            than 3 characters.
+           </p>
         <div id="buttons">
           <button class="button-clear" type="reset">Clear</button>
           <button class="button-submit" type="submit">Send it</button>

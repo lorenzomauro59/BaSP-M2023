@@ -141,6 +141,38 @@ textarea {
   word-spacing: 0.5em;
 }
 
+#name-error {
+  display: none;
+}
+
+#name-error-2 {
+  display: none;
+}
+
+#lname-error {
+  display: none;
+}
+
+#lname-error-2 {
+  display: none;
+}
+
+#email-error {
+  display: none;
+}
+
+#email-error-2 {
+  display: none;
+}
+
+#message-error {
+  display: none;
+}
+
+#message-error-2 {
+  display: none;
+}
+
 #sect-activities {
   padding-left: 2rem;
 }
@@ -317,6 +349,38 @@ textarea {
     margin-bottom: 2rem;
   }
 
+  #name-error {
+    display: none;
+  }
+
+  #name-error-2 {
+    display: none;
+  }
+
+  #lname-error {
+    display: none;
+  }
+
+  #lname-error-2 {
+    display: none;
+  }
+
+  #email-error {
+    display: none;
+  }
+
+  #email-error-2 {
+    display: none;
+  }
+
+  #message-error {
+    display: none;
+  }
+
+  #message-error-2 {
+    display: none;
+  }
+
   .container-0 {
     display: flex;
     flex-direction: row;
@@ -341,8 +405,8 @@ textarea {
   #buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
 
   .button-clear {
@@ -543,6 +607,38 @@ textarea {
   }
 
   #sect-welcome > img {
+    display: none;
+  }
+
+  #name-error {
+    display: none;
+  }
+
+  #name-error-2 {
+    display: none;
+  }
+
+  #lname-error {
+    display: none;
+  }
+
+  #lname-error-2 {
+    display: none;
+  }
+
+  #email-error {
+    display: none;
+  }
+
+  #email-error-2 {
+    display: none;
+  }
+
+  #message-error {
+    display: none;
+  }
+
+  #message-error-2 {
     display: none;
   }
 
