@@ -33,6 +33,6 @@ link: https://lorenzomauro59.github.io/BaSP-M2023/Week-05/index.html
 During this week, we focused on developing the login and sign up pages for our application. We implemented form validations using Javascript ES5 and applied appropriate styles using CSS and Flexbox to ensure that the pages are responsive across different devices. Additionally, we completed the requirements document, including all necessary validations for each field.
 
 Furthermore, regarding the validations, each field's validation was performed in the "blur" event of each field. Additionally, if any field had a validation error, the message should disappear in the "focus" event of that field because it is assumed that the user is correcting the error. In addition, an alert is displayed with the information loaded in the form if it has passed all the validations. If any validation did not pass, besides showing the error message below the field.
-link:
+link: https://lorenzomauro59.github.io/BaSP-M2023/Week-06/views/index.html
 
 ## Autor: Lorenzo Mauro

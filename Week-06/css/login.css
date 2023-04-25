@@ -38,37 +38,3 @@ input {
   display: flex;
   justify-content: center;
 }
-
-.button-login {
-  width: 14rem;
-  padding: 1rem 1rem;
-  margin-top: 2rem;
-  background-color: white;
-  border-color: rgba(55, 56, 103);
-  color: rgba(55, 56, 103);
-  text-align: center;
-  font-size: 1em;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-.button-sign-up {
-  width: 8rem;
-  padding: 1rem 1rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  background-color: white;
-  border-color: rgba(55, 56, 103);
-  color: rgba(55, 56, 103);
-  text-align: center;
-  font-size: 1em;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-.buttons-1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 2rem;
-}
