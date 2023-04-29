@@ -131,6 +131,21 @@ window.onload = function () {
 
   var inputDate = document.getElementById("date");
   var dateError = document.getElementById("date-error");
+  // var dateString = inputDate.value;
+  // var newDateFormat = convertDateFormat(dateString);
+  // inputDate.value = newDateFormat;
+
+  // function convertDateFormat(dateString) {
+  //   var date = new Date(dateString);
+
+  //   var newDateFormat = date.toLocaleDateString("en-US", {
+  //     year: "numeric",
+  //     month: "2-digit",
+  //     day: "2-digit",
+  //   });
+
+  //   return newDateFormat;
+  // }
 
   inputDate.addEventListener("blur", function () {
     if (inputDate.value === "") {
@@ -420,6 +435,30 @@ window.onload = function () {
 
   var buttonRegister = document.querySelector(".button-register");
 
+  const name = localStorage.getItem("name");
+  const lastName = localStorage.getItem("last-name");
+  const dni = localStorage.getItem("dni");
+  const date = localStorage.getItem("date");
+  const tel = localStorage.getItem("tel");
+  const address = localStorage.getItem("address");
+  const city = localStorage.getItem("city");
+  const postalCode = localStorage.getItem("postalcode");
+  const email = localStorage.getItem("email");
+  const pass = localStorage.getItem("pass");
+  const passr = localStorage.getItem("pass-r");
+
+  document.getElementById("name").value = name;
+  document.getElementById("l-name").value = lastName;
+  document.getElementById("dni").value = dni;
+  document.getElementById("date").value = date;
+  document.getElementById("tel").value = tel;
+  document.getElementById("address").value = address;
+  document.getElementById("city").value = city;
+  document.getElementById("postalcode").value = postalCode;
+  document.getElementById("email").value = email;
+  document.getElementById("pass").value = pass;
+  document.getElementById("pass-r").value = passr;
+
   buttonRegister.onclick = function (e) {
     e.preventDefault();
     if (
@@ -440,39 +479,86 @@ window.onload = function () {
       var url =
         " https://api-rest-server.vercel.app/signup?name=" +
         inputName.value.value +
-        "&lastname=" +
+        "&lastName=" +
         inputLastName.value +
-        "&lastname=" +
+        "&dni=" +
         inputDni.value +
-        "&lastname=" +
+        "&dob=" +
         inputDate.value +
-        "&lastname=" +
+        "&phone=" +
         inputTel.value +
-        "&lastname=" +
+        "&address=" +
         inputAddress.value +
-        "&lastname=" +
+        "&city=" +
         inputCity.value +
-        "&lastname=" +
+        "&zip=" +
         inputPostalCode.value +
-        "&lastname=" +
+        "&email=" +
         inputEmail.value +
-        "&lastname=" +
+        "&password=" +
         inputPass.value +
-        "&lastname=" +
+        "&passr=" +
         inputPassr.value;
 
       fetch(url)
         .then(function (response) {
-          if (!response.ok) {
-            throw new Error(response.success);
-          }
           return response.json();
         })
         .then(function (data) {
-          alert("Sign up succesfuly \n" + JSON.stringify(data));
+          localStorage.setItem("name", inputName.value);
+          localStorage.setItem("last-name", inputLastName.value);
+          localStorage.setItem("dni", inputDni.value);
+          localStorage.setItem("date", inputDate.value);
+          localStorage.setItem("tel", inputTel.value);
+          localStorage.setItem("address", inputAddress.value);
+          localStorage.setItem("city", inputCity.value);
+          localStorage.setItem("postalcode", inputPostalCode.value);
+          localStorage.setItem("email", inputEmail.value);
+          localStorage.setItem("pass", inputPass.value);
+          localStorage.setItem("pass-r", inputPassr.value);
+
+          if (!data.success) {
+            throw new Error(JSON.stringify(data));
+          }
+          alert(
+            "SignUp succesful: \n" +
+              JSON.stringify(data) +
+              "\n" +
+              "Name: " +
+              inputName.value +
+              "\n" +
+              "Last Name: " +
+              inputLastName.value +
+              "\n" +
+              "Dni: " +
+              inputDni.value +
+              "\n" +
+              "Date: " +
+              inputDate.value +
+              "\n" +
+              "Tel: " +
+              inputTel.value +
+              "\n" +
+              "Address: " +
+              inputAddress.value +
+              "\n" +
+              "City: " +
+              inputCity.value +
+              "\n" +
+              "Postal Code: " +
+              inputPostalCode.value +
+              "Email: " +
+              emailInput.value +
+              "\n" +
+              "Password: " +
+              inputPass.value +
+              "\n" +
+              "Password Repeat: " +
+              inputPassr.value
+          );
         })
         .catch(function (error) {
-          alert("Sign up unsuccessful \n" + error);
+          alert("SignUp unsuccessful \n" + error);
         });
 
       if (
