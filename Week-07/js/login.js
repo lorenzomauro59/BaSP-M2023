@@ -83,35 +83,6 @@ window.onload = function () {
     if (emailInput.value === "" || inputPass.value === "") {
       alert("Complete the fields");
     } else {
-      var url =
-        " http://api-rest-server.vercel.app/login?email=" +
-        emailInput.value +
-        "&password=" +
-        inputPass.value;
-
-      fetch(url)
-        .then(function (data) {
-          return data.json();
-        })
-        .then(function (data) {
-          if (!data.success) {
-            throw new Error(JSON.stringify(data));
-          }
-          alert(
-            "Log in was succesful: \n" +
-              JSON.stringify(data) +
-              "\n" +
-              "Email: " +
-              emailInput.value +
-              "\n" +
-              "Password: " +
-              inputPass.value
-          );
-        })
-        .catch(function (error) {
-          alert("Log in was unsuccessful \n" + error);
-        });
-
       if (regex.test(emailInput.value) && hasNumbersAndChar(inputPass.value)) {
         alert(`Email: ${emailInput.value} Password: ${inputPass.value}`);
       }

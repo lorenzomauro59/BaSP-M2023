@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../Week-06/css/reset.css" />
+    <link rel="stylesheet" href="../../Week-06/css/styles.css" />
+    <link rel="stylesheet" href="../../Week-06/css/main.css" />
+    <link rel="stylesheet" href="../../Week-06/css/header.css" />
+    <link rel="stylesheet" href="../../Week-06/css/footer.css" />
+    <link rel="stylesheet" href="../../Week-06/css/login.css" />
+    <script src="../../Week-06/js/login.js"></script>
+    <title>Log in - Mega Rocket</title>
+  </head>
+  <body>
+    <header>
+      <div id="container">
+        <h1>Mega Rocket</h1>
+        <div id="mr-icon">
+          <a href=""
+            ><img src="../../assets/imgs/mr-icon.svg" alt="menu icon"
+          /></a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div id="form-group">
+        <div id="capsule">
+          <h3>Mega Rocket</h3>
+          <h4>Login</h4>
+          <form>
+            <label class="label-2" for="email">Email:</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+            <p id="email-error">This field is required</p>
+            <p id="email-error-2">Enter a valid email address</p>
+            <label class="label-2" for="pass">Password:</label>
+            <input
+              type="password"
+              id="pass"
+              name="pass"
+              placeholder="Enter your password"
+            />
+            <p id="pass-error">This field is required</p>
+            <p id="pass-error-2">Password must contain letters and numbers</p>
+            <div id="button-login-flex">
+              <button class="button-login" type="submit">Log in</button>
+            </div>
+            <div class="buttons-1">
+              <a href="../views/index.html"
+                ><button class="button-sign-up" type="button">Home</button></a
+              >
+              <a href="../views/sign-up.html"
+                ><button class="button-sign-up" type="button">
+                  Sign up
+                </button></a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Rosario, Argentina</p>
+      <p>Copyright &copy; 2023 Mega Rocket. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

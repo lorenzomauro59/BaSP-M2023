@@ -1,0 +1,40 @@
+input {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+  border: 0.1rem solid rgba(55, 56, 103, 0.4);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+#form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 10%;
+  background-color: white;
+}
+
+#email-error {
+  display: none;
+}
+
+#email-error-2 {
+  display: none;
+}
+
+#pass-error {
+  display: none;
+}
+
+#pass-error-2 {
+  display: none;
+}
+
+#button-login-flex {
+  display: flex;
+  justify-content: center;
+}

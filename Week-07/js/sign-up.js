@@ -437,44 +437,6 @@ window.onload = function () {
     ) {
       alert("Complete the fields");
     } else {
-      var url =
-        " https://api-rest-server.vercel.app/signup?name=" +
-        inputName.value.value +
-        "&lastname=" +
-        inputLastName.value +
-        "&lastname=" +
-        inputDni.value +
-        "&lastname=" +
-        inputDate.value +
-        "&lastname=" +
-        inputTel.value +
-        "&lastname=" +
-        inputAddress.value +
-        "&lastname=" +
-        inputCity.value +
-        "&lastname=" +
-        inputPostalCode.value +
-        "&lastname=" +
-        inputEmail.value +
-        "&lastname=" +
-        inputPass.value +
-        "&lastname=" +
-        inputPassr.value;
-
-      fetch(url)
-        .then(function (response) {
-          if (!response.ok) {
-            throw new Error(response.success);
-          }
-          return response.json();
-        })
-        .then(function (data) {
-          alert("Sign up succesfuly \n" + JSON.stringify(data));
-        })
-        .catch(function (error) {
-          alert("Sign up unsuccessful \n" + error);
-        });
-
       if (
         !moreThan3Char(inputName.value) &&
         !lettersOnly(inputName.value) &&

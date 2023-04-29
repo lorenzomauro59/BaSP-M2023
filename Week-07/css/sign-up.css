@@ -1,0 +1,109 @@
+input,
+input[type="text"] {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+  border: 0.1rem solid rgba(55, 56, 103, 0.4);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+#name-error {
+  display: none;
+}
+
+#name-error-2 {
+  display: none;
+}
+
+#lname-error {
+  display: none;
+}
+
+#lname-error-2 {
+  display: none;
+}
+
+#dni-error {
+  display: none;
+}
+
+#dni-error-2 {
+  display: none;
+}
+
+#date-error {
+  display: none;
+}
+
+#tel-error {
+  display: none;
+}
+
+#tel-error-2 {
+  display: none;
+}
+
+#address-error {
+  display: none;
+}
+
+#address-error-2 {
+  display: none;
+}
+
+#city-error {
+  display: none;
+}
+
+#city-error-2 {
+  display: none;
+}
+
+#postalcode-error {
+  display: none;
+}
+
+#postalcode-error-2 {
+  display: none;
+}
+
+#email-error {
+  display: none;
+}
+
+#email-error-2 {
+  display: none;
+}
+
+#pass-error {
+  display: none;
+}
+
+#pass-error-2 {
+  display: none;
+}
+
+#pass-r-error {
+  display: none;
+}
+
+#pass-r-error-2 {
+  display: none;
+}
+
+@media only screen and (min-width: 1025px) {
+  form {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .inputs-form {
+    width: 100%;
+    margin-right: 1rem;
+  }
+
+  .pairs {
+    display: flex;
+  }
+}
