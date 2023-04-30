@@ -17,10 +17,10 @@ window.onload = function () {
     }
   });
 
-  emailInput.onfocus = function () {
+  emailInput.addEventListener("focus", function () {
     emailError.style.display = "none";
     emailError2.style.display = "none";
-  };
+  });
 
   var inputPass = document.querySelector("#pass");
   var passError = document.getElementById("pass-error");
@@ -68,10 +68,10 @@ window.onload = function () {
     }
   });
 
-  inputPass.onfocus = function () {
+  inputPass.addEventListener("focus", function () {
     passError.style.display = "none";
     passError2.style.display = "none";
-  };
+  });
 
   var buttonLogin = document.querySelector(".button-login");
   var emailInput = document.querySelector("#email");
