@@ -17,10 +17,10 @@ window.onload = function () {
     }
   });
 
-  emailInput.onfocus = function () {
+  emailInput.addEventListener("focus", function () {
     emailError.style.display = "none";
     emailError2.style.display = "none";
-  };
+  });
 
   var inputPass = document.querySelector("#pass");
   var passError = document.getElementById("pass-error");
@@ -68,10 +68,10 @@ window.onload = function () {
     }
   });
 
-  inputPass.onfocus = function () {
+  inputPass.addEventListener("focus", function () {
     passError.style.display = "none";
     passError2.style.display = "none";
-  };
+  });
 
   var buttonLogin = document.querySelector(".button-login");
   var emailInput = document.querySelector("#email");
@@ -83,6 +83,35 @@ window.onload = function () {
     if (emailInput.value === "" || inputPass.value === "") {
       alert("Complete the fields");
     } else {
+      var url =
+        " http://api-rest-server.vercel.app/login?email=" +
+        emailInput.value +
+        "&password=" +
+        inputPass.value;
+
+      fetch(url)
+        .then(function (data) {
+          return data.json();
+        })
+        .then(function (data) {
+          if (!data.success) {
+            throw new Error(JSON.stringify(data));
+          }
+          alert(
+            "Log in was succesful: \n" +
+              JSON.stringify(data) +
+              "\n" +
+              "Email: " +
+              emailInput.value +
+              "\n" +
+              "Password: " +
+              inputPass.value
+          );
+        })
+        .catch(function (error) {
+          alert("Log in was unsuccessful \n" + error);
+        });
+
       if (regex.test(emailInput.value) && hasNumbersAndChar(inputPass.value)) {
         alert(`Email: ${emailInput.value} Password: ${inputPass.value}`);
       }

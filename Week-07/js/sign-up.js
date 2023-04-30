@@ -42,10 +42,10 @@ window.onload = function () {
     }
   });
 
-  inputName.onfocus = function () {
+  inputName.addEventListener("focus", function () {
     nameError.style.display = "none";
     nameError2.style.display = "none";
-  };
+  });
 
   var inputLastName = document.getElementById("l-name");
   var lnameError = document.getElementById("lname-error");
@@ -90,10 +90,10 @@ window.onload = function () {
     }
   });
 
-  inputLastName.onfocus = function () {
+  inputLastName.addEventListener("focus", function () {
     lnameError.style.display = "none";
     lnameError2.style.display = "none";
-  };
+  });
 
   var inputDni = document.getElementById("dni");
   var dniError = document.getElementById("dni-error");
@@ -124,10 +124,10 @@ window.onload = function () {
     }
   });
 
-  inputDni.onfocus = function () {
+  inputDni.addEventListener("focus", function () {
     dniError.style.display = "none";
     dniError2.style.display = "none";
-  };
+  });
 
   var inputDate = document.getElementById("date");
   var dateError = document.getElementById("date-error");
@@ -140,9 +140,9 @@ window.onload = function () {
     }
   });
 
-  inputDate.onfocus = function () {
+  inputDate.addEventListener("focus", function () {
     dateError.style.display = "none";
-  };
+  });
 
   var inputTel = document.getElementById("tel");
   var telError = document.getElementById("tel-error");
@@ -171,10 +171,10 @@ window.onload = function () {
     }
   });
 
-  inputTel.onfocus = function () {
+  inputTel.addEventListener("focus", function () {
     telError.style.display = "none";
     telError2.style.display = "none";
-  };
+  });
 
   var inputAddress = document.getElementById("address");
   var addressError = document.getElementById("address-error");
@@ -218,10 +218,10 @@ window.onload = function () {
     }
   });
 
-  inputAddress.onfocus = function () {
+  inputAddress.addEventListener("focus", function () {
     addressError.style.display = "none";
     addressError2.style.display = "none";
-  };
+  });
 
   var inputCity = document.getElementById("city");
   var cityError = document.getElementById("city-error");
@@ -259,10 +259,10 @@ window.onload = function () {
     }
   });
 
-  inputCity.onfocus = function () {
+  inputCity.addEventListener("focus", function () {
     cityError.style.display = "none";
     cityError2.style.display = "none";
-  };
+  });
 
   var inputPostalCode = document.getElementById("postalcode");
   var postalCodeError = document.getElementById("postalcode-error");
@@ -293,10 +293,10 @@ window.onload = function () {
     }
   });
 
-  inputPostalCode.onfocus = function () {
+  inputPostalCode.addEventListener("focus", function () {
     postalCodeError.style.display = "none";
     postalCodeError2.style.display = "none";
-  };
+  });
 
   var inputEmail = document.getElementById("email");
   var emailError = document.getElementById("email-error");
@@ -317,10 +317,10 @@ window.onload = function () {
     }
   });
 
-  inputEmail.onfocus = function () {
+  inputEmail.addEventListener("focus", function () {
     emailError.style.display = "none";
     emailError2.style.display = "none";
-  };
+  });
 
   var inputPass = document.getElementById("pass");
   var passError = document.getElementById("pass-error");
@@ -365,10 +365,10 @@ window.onload = function () {
     }
   });
 
-  inputPass.onfocus = function () {
+  inputPass.addEventListener("focus", function () {
     passError.style.display = "none";
     passError2.style.display = "none";
-  };
+  });
 
   var inputPassr = document.getElementById("pass-r");
   var passrError = document.getElementById("pass-r-error");
@@ -413,12 +413,36 @@ window.onload = function () {
     }
   });
 
-  inputPassr.onfocus = function () {
+  inputPassr.addEventListener("focus", function () {
     passrError.style.display = "none";
     passrError2.style.display = "none";
-  };
+  });
 
   var buttonRegister = document.querySelector(".button-register");
+
+  const name = localStorage.getItem("name");
+  const lastName = localStorage.getItem("last-name");
+  const dni = localStorage.getItem("dni");
+  const date = localStorage.getItem("date");
+  const tel = localStorage.getItem("tel");
+  const address = localStorage.getItem("address");
+  const city = localStorage.getItem("city");
+  const postalCode = localStorage.getItem("postalcode");
+  const email = localStorage.getItem("email");
+  const pass = localStorage.getItem("pass");
+  const passr = localStorage.getItem("pass-r");
+
+  document.getElementById("name").value = name;
+  document.getElementById("l-name").value = lastName;
+  document.getElementById("dni").value = dni;
+  document.getElementById("date").value = date;
+  document.getElementById("tel").value = tel;
+  document.getElementById("address").value = address;
+  document.getElementById("city").value = city;
+  document.getElementById("postalcode").value = postalCode;
+  document.getElementById("email").value = email;
+  document.getElementById("pass").value = pass;
+  document.getElementById("pass-r").value = passr;
 
   buttonRegister.onclick = function (e) {
     e.preventDefault();
@@ -437,6 +461,79 @@ window.onload = function () {
     ) {
       alert("Complete the fields");
     } else {
+      var url =
+        "https://api-rest-server.vercel.app/signup?name=" +
+        inputName.value.value +
+        "&lastName=" +
+        inputLastName.value +
+        "&dni=" +
+        inputDni.value +
+        "&dob=" +
+        inputDate.value +
+        "&phone=" +
+        inputTel.value +
+        "&address=" +
+        inputAddress.value +
+        "&city=" +
+        inputCity.value +
+        "&zip=" +
+        inputPostalCode.value +
+        "&email=" +
+        inputEmail.value +
+        "&password=" +
+        inputPass.value +
+        "&passr=" +
+        inputPassr.value;
+
+      fetch(url)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          if (!data.success) {
+            throw new Error(JSON.stringify(data));
+          }
+          alert(
+            "SignUp succesful: \n" +
+              JSON.stringify(data) +
+              "\n" +
+              "Name: " +
+              inputName.value +
+              "\n" +
+              "Last Name: " +
+              inputLastName.value +
+              "\n" +
+              "Dni: " +
+              inputDni.value +
+              "\n" +
+              "Date: " +
+              inputDate.value +
+              "\n" +
+              "Tel: " +
+              inputTel.value +
+              "\n" +
+              "Address: " +
+              inputAddress.value +
+              "\n" +
+              "City: " +
+              inputCity.value +
+              "\n" +
+              "Postal Code: " +
+              inputPostalCode.value +
+              "Email: " +
+              emailInput.value +
+              "\n" +
+              "Password: " +
+              inputPass.value +
+              "\n" +
+              "Password Repeat: " +
+              inputPassr.value
+          );
+        })
+        .catch(function (error) {
+          alert("SignUp unsuccessful \n" + error);
+        });
+
       if (
         !moreThan3Char(inputName.value) &&
         !lettersOnly(inputName.value) &&
@@ -458,6 +555,17 @@ window.onload = function () {
           City: ${inputCity.value} Postal Code: ${inputPostalCode.value} Email: ${inputEmail.value} 
           Password: ${inputPass.value} Password Repeat: ${inputPassr.value}`
         );
+        localStorage.setItem("name", inputName.value);
+        localStorage.setItem("last-name", inputLastName.value);
+        localStorage.setItem("dni", inputDni.value);
+        localStorage.setItem("date", inputDate.value);
+        localStorage.setItem("tel", inputTel.value);
+        localStorage.setItem("address", inputAddress.value);
+        localStorage.setItem("city", inputCity.value);
+        localStorage.setItem("postalcode", inputPostalCode.value);
+        localStorage.setItem("email", inputEmail.value);
+        localStorage.setItem("pass", inputPass.value);
+        localStorage.setItem("pass-r", inputPassr.value);
       }
 
       if (moreThan3Char(inputName.value) || lettersOnly(inputName.value)) {
