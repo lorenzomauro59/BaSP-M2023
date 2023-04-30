@@ -444,7 +444,10 @@ window.onload = function () {
   document.getElementById("pass").value = pass;
   document.getElementById("pass-r").value = passr;
 
-  buttonRegister.onclick = function (e) {
+  var arrayDate = inputDate.value.split("-");
+  var formattedDate = arrayDate[1] + "/" + arrayDate[2] + "/" + arrayDate[0];
+
+  buttonRegister.addEventListener("click", function (e) {
     e.preventDefault();
     if (
       inputName.value === "" ||
@@ -469,7 +472,7 @@ window.onload = function () {
         "&dni=" +
         inputDni.value +
         "&dob=" +
-        inputDate.value +
+        formattedDate +
         "&phone=" +
         inputTel.value +
         "&address=" +
@@ -521,7 +524,7 @@ window.onload = function () {
               "Postal Code: " +
               inputPostalCode.value +
               "Email: " +
-              emailInput.value +
+              inputEmail.value +
               "\n" +
               "Password: " +
               inputPass.value +
@@ -617,5 +620,5 @@ window.onload = function () {
         );
       }
     }
-  };
+  });
 };
