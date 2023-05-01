@@ -1,23 +1,23 @@
 window.onload = function () {
-  var emailInput = document.getElementById("email");
+  var inputEmail = document.getElementById("email");
   var emailError = document.getElementById("email-error");
   var emailError2 = document.getElementById("email-error-2");
 
-  emailInput.addEventListener("blur", function () {
-    if (emailInput.value === "") {
+  inputEmail.addEventListener("blur", function () {
+    if (inputEmail.value === "") {
       emailError.style.display = "flex";
     } else {
       emailError.style.display = "none";
     }
     var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regex.test(emailInput.value)) {
+    if (!regex.test(inputEmail.value)) {
       emailError2.style.display = "flex";
     } else {
       emailError2.style.display = "none";
     }
   });
 
-  emailInput.addEventListener("focus", function () {
+  inputEmail.addEventListener("focus", function () {
     emailError.style.display = "none";
     emailError2.style.display = "none";
   });
@@ -74,18 +74,25 @@ window.onload = function () {
   });
 
   var buttonLogin = document.querySelector(".button-login");
-  var emailInput = document.querySelector("#email");
+  var inputEmail = document.querySelector("#email");
   var inputPass = document.querySelector("#pass");
   var regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  var modalContent = document.querySelector("#myModal .modal-content");
+  var pContent = document.querySelector("#myModal .modal-content .p-content");
+
   buttonLogin.onclick = function (e) {
     e.preventDefault();
-    if (emailInput.value === "" || inputPass.value === "") {
-      alert("Complete the fields");
+
+    if (inputEmail.value === "" || inputPass.value === "") {
+      pContent.textContent = "Complete the fields";
+      modal.style.display = "block";
     } else {
       var url =
         " http://api-rest-server.vercel.app/login?email=" +
-        emailInput.value +
+        inputEmail.value +
         "&password=" +
         inputPass.value;
 
@@ -97,30 +104,45 @@ window.onload = function () {
           if (!data.success) {
             throw new Error(JSON.stringify(data));
           }
-          alert(
+          pContent.textContent =
             "Log in was succesful: \n" +
-              JSON.stringify(data) +
-              "\n" +
-              "Email: " +
-              emailInput.value +
-              "\n" +
-              "Password: " +
-              inputPass.value
-          );
+            JSON.stringify(data) +
+            "\n" +
+            "Email: " +
+            inputEmail.value +
+            "\n" +
+            "Password: " +
+            inputPass.value;
+          modal.style.display = "block";
         })
         .catch(function (error) {
-          alert("Log in was unsuccessful \n" + error);
+          pContent.textContent = "Log in was unsuccessful \n" + error;
+          modal.style.display = "block";
         });
 
-      if (regex.test(emailInput.value) && hasNumbersAndChar(inputPass.value)) {
-        alert(`Email: ${emailInput.value} Password: ${inputPass.value}`);
+      if (regex.test(inputEmail.value) && hasNumbersAndChar(inputPass.value)) {
+        pContent.textContent = `Email: ${inputEmail.value} Password: ${inputPass.value}`;
+        modal.style.display = "block";
       }
-      if (!regex.test(emailInput.value)) {
-        alert("Email: Enter a valid email address");
+      if (!regex.test(inputEmail.value)) {
+        pContent.textContent = "Email: Enter a valid email address";
+        modal.style.display = "block";
       }
       if (!hasNumbersAndChar(inputPass.value)) {
-        alert("Password: Password must contain letters and numbers");
+        pContent.textContent =
+          "Password: Password must contain letters and numbers";
+        modal.style.display = "block";
       }
+    }
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
   };
 };
