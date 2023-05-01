@@ -447,6 +447,11 @@ window.onload = function () {
   var arrayDate = inputDate.value.split("-");
   var formattedDate = arrayDate[1] + "/" + arrayDate[2] + "/" + arrayDate[0];
 
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  var modalContent = document.querySelector("#myModal .modal-content");
+  var pContent = document.querySelector("#myModal .modal-content .p-content");
+
   buttonRegister.addEventListener("click", function (e) {
     e.preventDefault();
     if (
@@ -462,7 +467,8 @@ window.onload = function () {
       inputPass.value === "" ||
       inputPassr.value === ""
     ) {
-      alert("Complete the fields");
+      pContent.textContent = "Complete the fields";
+      modal.style.display = "block";
     } else {
       var url =
         "https://api-rest-server.vercel.app/signup?name=" +
@@ -485,7 +491,7 @@ window.onload = function () {
         inputEmail.value +
         "&password=" +
         inputPass.value +
-        "&passr=" +
+        "&passsword=" +
         inputPassr.value;
 
       fetch(url)
@@ -496,45 +502,46 @@ window.onload = function () {
           if (!data.success) {
             throw new Error(JSON.stringify(data));
           }
-          alert(
+          pContent.textContent =
             "SignUp succesful: \n" +
-              JSON.stringify(data) +
-              "\n" +
-              "Name: " +
-              inputName.value +
-              "\n" +
-              "Last Name: " +
-              inputLastName.value +
-              "\n" +
-              "Dni: " +
-              inputDni.value +
-              "\n" +
-              "Date: " +
-              inputDate.value +
-              "\n" +
-              "Tel: " +
-              inputTel.value +
-              "\n" +
-              "Address: " +
-              inputAddress.value +
-              "\n" +
-              "City: " +
-              inputCity.value +
-              "\n" +
-              "Postal Code: " +
-              inputPostalCode.value +
-              "Email: " +
-              inputEmail.value +
-              "\n" +
-              "Password: " +
-              inputPass.value +
-              "\n" +
-              "Password Repeat: " +
-              inputPassr.value
-          );
+            JSON.stringify(data) +
+            "\n" +
+            "Name: " +
+            inputName.value +
+            "\n" +
+            "Last Name: " +
+            inputLastName.value +
+            "\n" +
+            "Dni: " +
+            inputDni.value +
+            "\n" +
+            "Date: " +
+            inputDate.value +
+            "\n" +
+            "Tel: " +
+            inputTel.value +
+            "\n" +
+            "Address: " +
+            inputAddress.value +
+            "\n" +
+            "City: " +
+            inputCity.value +
+            "\n" +
+            "Postal Code: " +
+            inputPostalCode.value +
+            "Email: " +
+            inputEmail.value +
+            "\n" +
+            "Password: " +
+            inputPass.value +
+            "\n" +
+            "Password Repeat: " +
+            inputPassr.value;
+          modal.style.display = "block";
         })
         .catch(function (error) {
-          alert("SignUp unsuccessful \n" + error);
+          pContent.textContent = "SignUp unsuccessful \n" + error;
+          modal.style.display = "block";
         });
 
       if (
@@ -552,12 +559,12 @@ window.onload = function () {
         !validatePass(inputPass.value) &&
         !validatePassr(inputPassr.value)
       ) {
-        alert(
-          `Name: ${inputName.value} Last Name: ${inputLastName.value} Dni: ${inputDni.value} 
+        pContent.textContent = `Name: ${inputName.value} Last Name: ${inputLastName.value} Dni: ${inputDni.value} 
           Birth Date: ${inputDate.value} Telephone: ${inputTel.value} Address: ${inputAddress.value}
           City: ${inputCity.value} Postal Code: ${inputPostalCode.value} Email: ${inputEmail.value} 
-          Password: ${inputPass.value} Password Repeat: ${inputPassr.value}`
-        );
+          Password: ${inputPass.value} Password Repeat: ${inputPassr.value}`;
+        modal.style.display = "block";
+
         localStorage.setItem("name", inputName.value);
         localStorage.setItem("last-name", inputLastName.value);
         localStorage.setItem("dni", inputDni.value);
@@ -572,53 +579,54 @@ window.onload = function () {
       }
 
       if (moreThan3Char(inputName.value) || lettersOnly(inputName.value)) {
-        alert(
-          "Name: This field must contain letters only and must be more than 3 letters."
-        );
+        pContent.textContent =
+          "Name: This field must contain letters only and must be more than 3 letters.";
       }
       if (moreThan3CharLn(inputName.value) || lettersOnlyLn(inputName.value)) {
-        alert(
-          "Last Name: This field must contain letters only and must be more than 3 letters."
-        );
+        pContent.textContent =
+          "Last Name: This field must contain letters only and must be more than 3 letters.";
       }
       if (validateDni(inputDni.value)) {
-        alert(
-          "Dni: This field must contain numbers only and must have more than 7 numbers."
-        );
+        pContent.textContent =
+          "Dni: This field must contain numbers only and must have more than 7 numbers.";
       }
       if (validateTel(inputTel.value)) {
-        alert(
-          "Tel: This field must contain numbers only and must have 10 numbers."
-        );
+        pContent.textContent =
+          "Tel: This field must contain numbers only and must have 10 numbers.";
       }
       if (validateAddress(inputAddress.value)) {
-        alert(
-          "Address: This field must contain at least 5 characters with letters, numbers and a space in between."
-        );
+        pContent.textContent =
+          "Address: This field must contain at least 5 characters with letters, numbers and a space in between.";
       }
       if (validateCity(inputCity.value)) {
-        alert(
-          "City: This field must contain Alphanumeric text and must have more than 3 letters."
-        );
+        pContent.textContent =
+          "City: This field must contain Alphanumeric text and must have more than 3 letters.";
       }
       if (validatePostalCode(inputPostalCode.value)) {
-        alert(
-          "Postal Code: This field must contain numbers only and must have between 4 and 5 numbers."
-        );
+        pContent.textContent =
+          "Postal Code: This field must contain numbers only and must have between 4 and 5 numbers.";
       }
       if (!regex.test(inputEmail.value)) {
-        alert("Email: Enter a valid email address");
+        pContent.textContent = "Email: Enter a valid email address";
       }
       if (validatePass(inputPass.value)) {
-        alert(
-          "Password: This field must contain letters and numbers, and at least contains 8 characters"
-        );
+        pContent.textContent =
+          "Password: This field must contain letters and numbers, and at least contains 8 characters";
       }
       if (validatePassr(inputPassr.value)) {
-        alert(
-          "Password Repeat: This field must contain letters and numbers, and at least contains 8 characters"
-        );
+        pContent.textContent =
+          "Password Repeat: This field must contain letters and numbers, and at least contains 8 characters";
       }
     }
   });
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 };
