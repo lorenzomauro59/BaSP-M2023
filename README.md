@@ -35,4 +35,9 @@ During this week, we focused on developing the login and sign up pages for our a
 Furthermore, regarding the validations, each field's validation was performed in the "blur" event of each field. Additionally, if any field had a validation error, the message should disappear in the "focus" event of that field because it is assumed that the user is correcting the error. In addition, an alert is displayed with the information loaded in the form if it has passed all the validations. If any validation did not pass, besides showing the error message below the field.
 link: https://lorenzomauro59.github.io/BaSP-M2023/Week-06/views/index.html
 
+## Week 07
+
+During this week, we continued working on the previous problem by making a copy of the "Week-06" folder and renaming it to "Week-07". We extended the forms developed in Week-06 by adding HTTP requests using the Fetch method in JavaScript to send the data loaded in the forms to a web server when the confirmation button is pressed. The request is only executed if all form validations pass; otherwise, it should not be performed. We added this functionality to both the Signup and Login forms.
+Additionally, we replaced the alerts used in the Login and Signup screens with modals created using HTML and CSS.
+
 ## Autor: Lorenzo Mauro

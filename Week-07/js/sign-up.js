@@ -449,7 +449,6 @@ window.onload = function () {
 
   var modal = document.getElementById("myModal");
   var span = document.getElementsByClassName("close")[0];
-  var modalContent = document.querySelector("#myModal .modal-content");
   var pContent = document.querySelector("#myModal .modal-content .p-content");
 
   buttonRegister.addEventListener("click", function (e) {
@@ -472,7 +471,7 @@ window.onload = function () {
     } else {
       var url =
         "https://api-rest-server.vercel.app/signup?name=" +
-        inputName.value.value +
+        inputName.value +
         "&lastName=" +
         inputLastName.value +
         "&dni=" +
@@ -495,8 +494,8 @@ window.onload = function () {
         inputPassr.value;
 
       fetch(url)
-        .then(function (response) {
-          return response.json();
+        .then(function (data) {
+          return data.json();
         })
         .then(function (data) {
           if (!data.success) {

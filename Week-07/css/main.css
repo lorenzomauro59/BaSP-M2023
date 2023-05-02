@@ -131,4 +131,5 @@ section {
   word-spacing: 0.5em;
   padding-left: 0.5rem;
   color: rgba(55, 56, 103);
+  white-space: pre-line;
 }
