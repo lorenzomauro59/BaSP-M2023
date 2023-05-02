@@ -91,7 +91,7 @@ window.onload = function () {
       modal.style.display = "block";
     } else {
       var url =
-        " http://api-rest-server.vercel.app/login?email=" +
+        " https://api-rest-server.vercel.app/login?email=" +
         inputEmail.value +
         "&password=" +
         inputPass.value;
